@@ -1,0 +1,330 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+/** {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+/*}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    /*-webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    /*-webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    /*);
+
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin: 0px;
+    padding:0px;
+    width:100%;
+}
+
+/* Portrait layout (default) */
+/*.app {
+    /*background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+    /*position:absolute;             /* position in the center of the screen */                 /* text area height */
+    /*width:225px;                   /* text area width */
+    /*text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    /*margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+/*}*/
+/*
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+@import url('http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css');*/
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 2%;
+}
+
+body {
+  font: 14px/1 'Arial', sans-serif;
+  color: #555;
+  background: #eee;
+}
+
+h1 {
+  padding: 50px 0;
+  font-weight: 400;
+  text-align: center;
+}
+
+p {
+  padding:20px;
+  line-height: 1.5;
+  color:#fff;
+  text-align:center;
+}
+
+main {
+  min-width: 320px;
+  max-width: 500px;
+  padding: 50px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+#oiseaux{
+    width:100%;
+    height:250px;
+    background-color:fff;
+    border: 1px solid #ddd;
+
+}
+
+nav{
+    position:relative;
+    width:100%;
+    height:40px;
+    background-color: #209BDE;
+    bottom:-32px;
+}
+
+nav h2{
+    position:relative;
+    text-align:center;
+    color:#fff;
+    font-size: 15px;
+    top:11px;
+}
+
+#title h2{
+    position:relative;
+    top:50px;
+    width:100%;
+    margin:0;
+    padding:10px;
+    background-color:rgba(0,0,0,0.5);
+    text-align:center;
+    color:#fff;
+    font-size: 12px;
+
+}
+
+section {
+  display: none;
+  padding: 20px 0 0;
+  /*border-top: 1px solid #ddd;*/
+  background-color: #209BDE;
+}
+
+input.menu{
+  display: none;
+}
+
+
+
+label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  border: 1px solid transparent;
+  /*border-radius: 10px 10px 0px 0px;
+  background-color: #209BDE;*/
+}
+
+label:before {
+  font-family: Arial;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+label[for*='1']:before { content: ''; }
+label[for*='2']:before { content: ''; }
+label[for*='3']:before { content: ''; }
+label[for*='4']:before { content: ''; }
+
+
+/*label:hover {
+  color: #FFF;
+  cursor: pointer;
+}*/
+
+input + label{
+    color:#FFF;
+  /*border: 1px solid #ddd;
+  border-top: 2px solid;
+  border-bottom: 1px solid #fff;*/
+  border-radius: 10px 10px 10px 10px;
+  background-color: #209BDE;
+  opacity: 0.5;
+}
+input:checked + label{
+    color:#FFF;
+  /*border: 1px solid #ddd;
+  border-top: 2px solid;
+  border-bottom: 1px solid #fff;*/
+  border-radius: 10px 10px 0px 0px;
+  background-color: #209BDE;
+  opacity: 1;
+}
+
+input + label p{
+  display: none;
+}
+input:checked + label p{
+  display: inherit;
+  position:relative;
+  margin: 0;
+  padding: 0;
+  line-height: 2;
+  right:4px;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4 {
+  display: block;
+}
+
+#fond{
+    background-image:url(../fond.jpg);
+    background-size:100%;
+    padding-top:30%;
+}
+
+#content1 table{
+    position:relative;
+    margin:auto;
+    padding-bottom:20px;
+}
+
+#content1 label{
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size: 14px;
+}
+
+#oiseaux table{
+    margin:auto;
+}
+
+#oiseaux p{
+    color:#000;
+    margin:0;
+    padding:0 5px 0 5px;
+    font-weight: bold;
+    font-size:12px;
+}
+
+/*
+main #fond img{
+    width:500px;
+    position:relative;
+    bottom:-50px;
+}
+
+main #fond{
+    z-index:1;
+}
+main #n1{
+    z-index:2;
+}*/
+
+@media screen and (max-width: 650px) {
+  label {
+    font-size: 0;
+  }
+  label:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  label {
+    padding: 15px;
+  }
+}
+
+.loader {
+    position : fixed;
+    z-index: 9999;
+    background : url(../img/chargement.png) 50% 50% no-repeat;
+    top : 0px;
+    left : 0px;
+    height : 100%;
+    width : 100%;
+    cursor : wait;
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
