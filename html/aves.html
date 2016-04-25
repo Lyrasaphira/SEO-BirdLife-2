@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <title>SEO BirdLife</title>
+</head>
+
+<body>
+    <div class="app">
+       <!--<div class="loader">
+       </div>-->
+<main>
+    <nav>
+      <h2>BETA 0.2.5</h2>
+      <a href="../index.html"><img id="home" src="../img/home.png" alt="home" /></a>
+      <a href=""><img id="logo" src="../img/logo.png" alt="logo" /></a>
+      <a href="menu.html"><img id="burger" src="../img/burger.png" alt="menu" /></a>
+    </nav>
+    <div id="title"><h2>IDENTIFICAR AVES</h2></div>
+
+  <div id="fond"><!--<img src="../fond.jpg" />-->
+
+  <input class="menu" id="tab1" type="radio" name="tabs" checked>
+  <label for="tab1" id="n1"><p>DISTRIBUCIÓN</p></label>
+    
+  <input class="menu" id="tab2" type="radio" name="tabs">
+  <label for="tab2" id="n2"><p>TAMAÑO</p></label>
+    
+  <input class="menu" id="tab3" type="radio" name="tabs">
+  <label for="tab3" id="n3"><p>COLOR</p></label>
+    
+  <input class="menu" id="tab4" type="radio" name="tabs">
+  <label for="tab4" id="n4"><p>HABITAT/PAISAJE</p></label>
+
+  <input class="menu" id="tab5" type="radio" name="tabs">
+  <label for="tab5" id="n5"><p>COMPORTAMIENTO</p></label>
+    
+  <input class="menu" id="tab6" type="radio" name="tabs">
+  <label for="tab6" id="n6"><p>COLOR PATAS</p></label>
+    
+  <input class="menu" id="tab7" type="radio" name="tabs">
+  <label for="tab7" id="n7"><p>PICO FORMA</p></label>
+    
+  <input class="menu" id="tab8" type="radio" name="tabs">
+  <label for="tab8" id="n8"><p>PICO COLOR</p></label>
+
+  <input class="menu" id="tab9" type="radio" name="tabs">
+  <label for="tab9" id="n9"><p>PICO GROSOR</p></label>
+    
+  <input class="menu" id="tab10" type="radio" name="tabs">
+  <label for="tab10" id="n10"><p>PICO LONGITUD</p></label>
+    
+  <input class="menu" id="tab11" type="radio" name="tabs">
+  <label for="tab11" id="n11"><p>ALIMENTO</p></label>
+    
+  <section id="content1"><!-- Distribucion -->
+    <table>
+        <tr>
+            <td><label><input type="checkbox" id="cbox1" value="checkbox_01" checked> Peninsula</label></td>
+            <td><label><input type="checkbox" id="cbox2" value="checkbox_02"> Canarias</label></td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" id="cbox3" value="checkbox_03"> Baleares</label></td>
+            <td><label><input type="checkbox" id="cbox4" value="checkbox_04"> Norte de Africa</label></td>
+        </tr>
+    </table>
+  </section>
+    
+  <section id="content2"><!-- Tamano -->
+    <p>
+      <input type="radio" name="radio1" value="taille1" checked> Como un gorrión o más pequeño<br>
+      <input type="radio" name="radio2" value="taille2"> Entre un gorrión y un mirlo <br>
+      <input type="radio" name="radio3" value="taille3"> Entre un mirlo y una paloma<br>
+      <input type="radio" name="radio4" value="taille4"> Entre una paloma y un pato<br>
+      <input type="radio" name="radio5" value="taille5"> Más grande que un pato<br>
+    </p>
+  </section>
+    
+  <section id="content3"><!-- Color -->
+    <table>
+        <tr>
+            <td><label><input type="checkbox" id="cbox1" value="checkbox_01" checked> Blanco</label></td>
+            <td><label><input type="checkbox" id="cbox2" value="checkbox_02"> Negro</label></td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" id="cbox3" value="checkbox_03"> Gris</label></td>
+            <td><label><input type="checkbox" id="cbox4" value="checkbox_04"> Crema</label></td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" id="cbox3" value="checkbox_03"> Naranja</label></td>
+            <td><label><input type="checkbox" id="cbox4" value="checkbox_04"> Amarillo</label></td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" id="cbox3" value="checkbox_03"> Rojo</label></td>
+            <td><label><input type="checkbox" id="cbox4" value="checkbox_04"> Verde</label></td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" id="cbox3" value="checkbox_03"> Azul</label></td>
+            <td><label><input type="checkbox" id="cbox4" value="checkbox_04"> Marrón</label></td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" id="cbox3" value="checkbox_03"> Rosa</label></td>
+            <td></td>
+        </tr>
+    </table>
+  </section>
+    
+  <section id="content4"><!-- Habitat/Paisaje -->
+    <p>
+      Color
+    </p>
+  </section>
+
+  <section id="content5"><!-- Comportamiento -->
+    <p>
+      5
+    </p>
+  </section>
+    
+  <section id="content6"><!-- Color patas -->
+    <p>
+      6
+    </p>
+  </section>
+    
+  <section id="content7"><!-- Pico forma -->
+    <p>
+      7
+    </p>
+  </section>
+  <section id="content8"><!-- Pico color -->
+    <p>
+      8
+    </p>
+  </section>
+    
+  <section id="content9"><!-- Pico grosor -->
+    <p>
+      9
+    </p>
+  </section>
+    
+  <section id="content10"><!-- Pico longitud -->
+    <p>
+      10
+    </p>
+  </section>
+  <section id="content11"><!-- Alimento -->
+    <p>
+      11
+    </p>
+  </section>
+
+    </div>
+    <div id="oiseaux">
+        <table>
+        <tr>
+            <td><img class="imgoiseau" src="../img/bird_01.jpg"/></td>
+            <td><img class="imgoiseau" src="../img/bird_02.jpg"/></td>
+            <td><img class="imgoiseau" src="../img/bird_03.jpg"/></td>
+            <td><img class="imgoiseau" src="../img/bird_04.jpg"/></td>
+        </tr>
+        <tr>
+            <td><p>Lorem ipsum</p></td>
+            <td><p>Lorem ipsum</p></td>
+            <td><p>Lorem ipsum</p></td>
+            <td><p>Lorem ipsum</p></td>
+        </tr>
+        <tr>
+            <td><img class="imgoiseau" src="../img/bird_04.jpg"/></td>
+            <td><img class="imgoiseau" src="../img/bird_03.jpg"/></td>
+            <td><img class="imgoiseau" src="../img/bird_02.jpg"/></td>
+            <td><img class="imgoiseau" src="../img/bird_01.jpg"/></td>
+        </tr>
+        <tr>
+            <td><p>Lorem ipsum</p></td>
+            <td><p>Lorem ipsum</p></td>
+            <td><p>Lorem ipsum</p></td>
+            <td><p>Lorem ipsum</p></td>
+        </tr>
+        <tr>
+            <td><img class="imgoiseau" src="../img/bird_01.jpg"/></td>
+            <td><img class="imgoiseau" src="../img/bird_02.jpg"/></td>
+            <td><img class="imgoiseau" src="../img/bird_03.jpg"/></td>
+            <td><img class="imgoiseau" src="../img/bird_04.jpg"/></td>
+        </tr>
+        <tr>
+            <td><p>Lorem ipsum</p></td>
+            <td><p>Lorem ipsum</p></td>
+            <td><p>Lorem ipsum</p></td>
+            <td><p>Lorem ipsum</p></td>
+        </tr>
+        <tr>
+            <td><img class="imgoiseau" src="../img/bird_04.jpg"/></td>
+            <td><img class="imgoiseau" src="../img/bird_03.jpg"/></td>
+            <td><img class="imgoiseau" src="../img/bird_02.jpg"/></td>
+            <td><img class="imgoiseau" src="../img/bird_01.jpg"/></td>
+        </tr>
+        <tr>
+            <td><p>Lorem ipsum</p></td>
+            <td><p>Lorem ipsum</p></td>
+            <td><p>Lorem ipsum</p></td>
+            <td><p>Lorem ipsum</p></td>
+        </tr>
+        <tr>
+            <td><img class="imgoiseau" src="../img/bird_01.jpg"/></td>
+            <td><img class="imgoiseau" src="../img/bird_02.jpg"/></td>
+            <td><img class="imgoiseau" src="../img/bird_03.jpg"/></td>
+            <td><img class="imgoiseau" src="../img/bird_04.jpg"/></td>
+        </tr>
+        <tr>
+            <td><p>Lorem ipsum</p></td>
+            <td><p>Lorem ipsum</p></td>
+            <td><p>Lorem ipsum</p></td>
+            <td><p>Lorem ipsum</p></td>
+        </tr>
+    </table>
+    </div>
+</main>
+
+
+    </div>
+    <script type="text/javascript" src="../cordova.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../js/css_auto-reload.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+    <script type="text/javascript">
+         document.styleSheets.start_autoreload(100)
+    </script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+$(window).load(function() {
+    $(".loader").fadeOut("1000");
+})
+</script>
+</body>
+
+</html>
