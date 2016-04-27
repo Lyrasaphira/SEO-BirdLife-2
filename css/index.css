@@ -106,26 +106,34 @@ nav h2{/*TITRE SEO BIRDLIFE*/
     text-align:center;
     color:#fff;
     font-size: 15px;
+    left:100px;
     top:11px;
 }
 
 nav #home{
     width:35px;
     position:relative;
-    top:-16px;
+    top:2px;
     left:10px;
 }
+#logo_container{
+    position:absolute;
+    width:100%;
+    margin:auto;
+    top:3px;
+    left:50%;
+}
 nav #logo{
-    height:40px;
+    height:30px;
     position:relative;
-    top:-15px;
-    left:50px;
+    left:-65px;
+    top:1px;
 }
 nav #burger{
     width:30px;
     position:relative;
     float:right;
-    top:-6px;
+    top:8px;
     right:10px;
 }
 
@@ -224,7 +232,14 @@ input:checked + label p{
 #tab1:checked ~ #content1,
 #tab2:checked ~ #content2,
 #tab3:checked ~ #content3,
-#tab4:checked ~ #content4 {
+#tab4:checked ~ #content4,
+#tab5:checked ~ #content5,
+#tab6:checked ~ #content6,
+#tab7:checked ~ #content7,
+#tab8:checked ~ #content8,
+#tab9:checked ~ #content9,
+#tab10:checked ~ #content10,
+#tab11:checked ~ #content11 {
   display: block;
 }
 
@@ -245,9 +260,10 @@ section label{
     color:#fff;
     font-family:Arial, sans-serif;
     font-size: 14px;
+    text-align:left;
 }
 
-#content2 p{
+.radio_align p{
   text-align:justify;
   margin:auto;
     width:350px;
@@ -276,7 +292,7 @@ section label{
   font-size: 12px;
   font-family: Arial, sans-serif;
   font-weight: lighter;
-  border-radius: 5px;
+  border-radius: 7px 7px 7px 7px;
   border-bottom: 3px solid #107BBE;
   position: relative;
   margin-bottom: 20px;
@@ -298,6 +314,74 @@ a {
   color:#000;
   text-align: justify;
 }
+
+#liens{
+  position:absolute;
+  margin:auto;
+  width:100%;
+  background-color: #fff;
+  top:40px;
+}
+
+#liens li{
+  font-size:15px;
+  color:#555;
+  height:50px;
+  line-height:50px;
+  text-align:center;
+  border:1px solid #ddd;
+}
+
+#liens a{
+  color:#555;
+}
+
+#back{
+  position:absolute;
+  width:50%;
+  padding-bottom: 25%;
+  left:0;
+  top:40px;
+  /*background-color:rgba(25,255,25,0.5);*/
+}
+
+#back img{
+  top:-40px;
+  padding-top:30%;
+  width:25px;
+}
+#next{
+  position:absolute;
+  width:48%;
+  padding-bottom: 25%;
+  left:50%;
+  top:40px;
+  /*background-color:rgba(255,25,25,0.5);*/
+}
+
+#next img{
+  left:99%;
+  top:-40px;
+  padding-top:30%;
+  width:25px;
+}
+@media screen and (max-width: 728px) {
+  #next img{
+  left:95%;
+  top:-40px;
+  padding-top:30%;
+  width:25px;
+  }
+}
+@media screen and (max-width: 357px) {
+  #next img{
+  left:90%;
+  top:-40px;
+  padding-top:30%;
+  width:25px;
+  }
+}
+
 
 /*
 main #fond img{

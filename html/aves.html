@@ -48,19 +48,21 @@
        </div>-->
 <main>
     <nav>
-      <h2>BETA 0.2.5</h2>
+      <h2> </h2>
       <a href="../index.html"><img id="home" src="../img/home.png" alt="home" /></a>
-      <a href=""><img id="logo" src="../img/logo.png" alt="logo" /></a>
+      <div id="logo_container"><img id="logo" src="../img/logo_3.png" alt="logo"/></div>
       <a href="menu.html"><img id="burger" src="../img/burger.png" alt="menu" /></a>
     </nav>
-    <div id="title"><h2>IDENTIFICAR AVES</h2></div>
+    <div id="title">
+      <h2>IDENTIFICAR AVES</h2>
+    </div>
 
   <div id="fond"><!--<img src="../fond.jpg" />-->
 
   <input class="menu" id="tab1" type="radio" name="tabs" checked>
   <label for="tab1" id="n1"><p>DISTRIBUCIÓN</p></label>
     
-  <input class="menu" id="tab2" type="radio" name="tabs">
+  <input class="menu" id="tab2" type="radio" name="tabs"> <?php // echo $tab2 ?>
   <label for="tab2" id="n2"><p>TAMAÑO</p></label>
     
   <input class="menu" id="tab3" type="radio" name="tabs">
@@ -93,98 +95,188 @@
   <section id="content1"><!-- Distribucion -->
     <table>
         <tr>
-            <td><label><input type="checkbox" id="cbox1" value="checkbox_01" checked> Peninsula</label></td>
-            <td><label><input type="checkbox" id="cbox2" value="checkbox_02"> Canarias</label></td>
+            <td><label><input type="checkbox" id="c1box1" value="checkbox_01" checked> Peninsula</label></td>
+            <td><label><input type="checkbox" id="c1box2" value="checkbox_02"> Canarias</label></td>
         </tr>
         <tr>
-            <td><label><input type="checkbox" id="cbox3" value="checkbox_03"> Baleares</label></td>
-            <td><label><input type="checkbox" id="cbox4" value="checkbox_04"> Norte de Africa</label></td>
+            <td><label><input type="checkbox" id="c1box3" value="checkbox_03"> Baleares</label></td>
+            <td><label><input type="checkbox" id="c1box4" value="checkbox_04"> Norte de Africa</label></td>
         </tr>
     </table>
   </section>
     
-  <section id="content2"><!-- Tamano -->
+  <section id="content2" class="radio_align"><!-- Tamano -->
     <p>
-      <input type="radio" name="radio1" value="taille1" checked> Como un gorrión o más pequeño<br>
-      <input type="radio" name="radio2" value="taille2"> Entre un gorrión y un mirlo <br>
-      <input type="radio" name="radio3" value="taille3"> Entre un mirlo y una paloma<br>
-      <input type="radio" name="radio4" value="taille4"> Entre una paloma y un pato<br>
-      <input type="radio" name="radio5" value="taille5"> Más grande que un pato<br>
+      <input type="radio" name="tamano" value="1" checked> Como un gorrión o más pequeño<br>
+      <input type="radio" name="tamano" value="2"> Entre un gorrión y un mirlo <br>
+      <input type="radio" name="tamano" value="3"> Entre un mirlo y una paloma<br>
+      <input type="radio" name="tamano" value="4"> Entre una paloma y un pato<br>
+      <input type="radio" name="tamano" value="5"> Más grande que un pato<br>
     </p>
   </section>
     
   <section id="content3"><!-- Color -->
     <table>
         <tr>
-            <td><label><input type="checkbox" id="cbox1" value="checkbox_01" checked> Blanco</label></td>
-            <td><label><input type="checkbox" id="cbox2" value="checkbox_02"> Negro</label></td>
+            <td><label><input type="checkbox" id="c3box1" value="c3box1" checked> Blanco</label></td>
+            <td><label><input type="checkbox" id="c3box2" value="c3box2"> Negro</label></td>
         </tr>
         <tr>
-            <td><label><input type="checkbox" id="cbox3" value="checkbox_03"> Gris</label></td>
-            <td><label><input type="checkbox" id="cbox4" value="checkbox_04"> Crema</label></td>
+            <td><label><input type="checkbox" id="c3box3" value="c3box3"> Gris</label></td>
+            <td><label><input type="checkbox" id="c3box4" value="c3box4"> Crema</label></td>
         </tr>
         <tr>
-            <td><label><input type="checkbox" id="cbox3" value="checkbox_03"> Naranja</label></td>
-            <td><label><input type="checkbox" id="cbox4" value="checkbox_04"> Amarillo</label></td>
+            <td><label><input type="checkbox" id="c3box5" value="c3box5"> Naranja</label></td>
+            <td><label><input type="checkbox" id="c3box6" value="c3box6"> Amarillo</label></td>
         </tr>
         <tr>
-            <td><label><input type="checkbox" id="cbox3" value="checkbox_03"> Rojo</label></td>
-            <td><label><input type="checkbox" id="cbox4" value="checkbox_04"> Verde</label></td>
+            <td><label><input type="checkbox" id="c3box7" value="c3box7"> Rojo</label></td>
+            <td><label><input type="checkbox" id="c3box8" value="c3box8"> Verde</label></td>
         </tr>
         <tr>
-            <td><label><input type="checkbox" id="cbox3" value="checkbox_03"> Azul</label></td>
-            <td><label><input type="checkbox" id="cbox4" value="checkbox_04"> Marrón</label></td>
+            <td><label><input type="checkbox" id="c3box9" value="c3box9"> Azul</label></td>
+            <td><label><input type="checkbox" id="c3box10" value="c3box10"> Marrón</label></td>
         </tr>
         <tr>
-            <td><label><input type="checkbox" id="cbox3" value="checkbox_03"> Rosa</label></td>
+            <td><label><input type="checkbox" id="c3box11" value="c3box11"> Rosa</label></td>
             <td></td>
         </tr>
     </table>
   </section>
     
   <section id="content4"><!-- Habitat/Paisaje -->
-    <p>
-      Color
-    </p>
+    <table>
+        <tr>
+            <td><label><input type="checkbox" id="c4box1" value="c4box1" checked> Bosque/Árboles</label></td>
+            <td><label><input type="checkbox" id="c4box2" value="c4box2"> Arbustos</label></td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" id="c4box3" value="c4box3"> Pastizales/Herbazales</label></td>
+            <td><label><input type="checkbox" id="c4box4" value="c4box4"> Agrícolas</label></td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" id="c4box5" value="c4box5"> Humedales</label></td>
+            <td><label><input type="checkbox" id="c4box6" value="c4box6"> Urbanos</label></td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" id="c4box7" value="c4box7"> Costa</label></td>
+            <td></td>
+        </tr>
+    </table>
   </section>
 
   <section id="content5"><!-- Comportamiento -->
-    <p>
-      5
-    </p>
+    <table>
+        <tr>
+            <td><label><input type="checkbox" id="c5box1" value="c5box1" checked> En un bando o grupo</label>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" id="c5box2" value="c5box2"> En un comedero de aves</label></td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" id="c5box3" value="c5box3"> Cazando o comiendo insectos</label></td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" id="c5box4" value="c5box4"> Alimentándose de frutos</label></td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" id="c5box5" value="c5box5" checked> Alimentándose de otras aves, pollos, huevos</label>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" id="c5box6" value="c5box6"> Caminando</label></td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" id="c5box7" value="c5box7"> Saltando/dando saltitos</label></td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" id="c5box8" value="c5box8"> Cola que mueve rápidamente</label></td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" id="c5box9" value="c5box9" checked> Buceando</label>
+        </tr>
+    </table>
   </section>
     
   <section id="content6"><!-- Color patas -->
-    <p>
-      6
-    </p>
+    <table>
+        <tr>
+            <td><label><input type="checkbox" id="c6box1" value="c6box1" checked> Blanco</label></td>
+            <td><label><input type="checkbox" id="c6box2" value="c6box2"> Negro</label></td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" id="c6box3" value="c6box3"> Naranja</label></td>
+            <td><label><input type="checkbox" id="c6box4" value="c6box4"> Amarillo</label></td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" id="c6box5" value="c6box5"> Rojo</label></td>
+            <td><label><input type="checkbox" id="c6box6" value="c6box6"> Verde</label></td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" id="c6box7" value="c6box7"> Azul</label></td>
+            <td><label><input type="checkbox" id="c6box8" value="c6box8"> Marrón</label></td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" id="c6box9" value="c6box9"> Rosa</label></td>
+            <td></td>
+        </tr>
+    </table>
   </section>
     
-  <section id="content7"><!-- Pico forma -->
+  <section id="content7" class="radio_align"><!-- Pico forma -->
     <p>
-      7
+      <input type="radio" name="pforma" value="1" checked> Ganchudo<br>
+      <input type="radio" name="pforma" value="2"> Curvado<br>
+      <input type="radio" name="pforma" value="3"> Pico de pato<br>
+      <input type="radio" name="pforma" value="4"> Pico poderoso<br>
     </p>
   </section>
   <section id="content8"><!-- Pico color -->
+    <table>
+        <tr>
+            <td><label><input type="checkbox" id="c8box1" value="c8box1" checked> Blanco</label></td>
+            <td><label><input type="checkbox" id="c8box2" value="c6box2"> Negro</label></td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" id="c8box3" value="c8box3"> Naranja</label></td>
+            <td><label><input type="checkbox" id="c8box4" value="c8box4"> Amarillo</label></td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" id="c8box5" value="c8box5"> Rojo</label></td>
+            <td><label><input type="checkbox" id="c8box6" value="c8box6"> Verde</label></td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" id="c8box7" value="c8box7"> Azul</label></td>
+            <td><label><input type="checkbox" id="c8box8" value="c8box8"> Marrón</label></td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" id="c8box9" value="c8box9"> Rosa</label></td>
+            <td></td>
+        </tr>
+    </table>
+  </section>
+    
+  <section id="content9" class="radio_align"><!-- Pico grosor -->
     <p>
-      8
+      <input type="radio" name="pgrosor" value="1" checked> Fino<br>
+      <input type="radio" name="pgrosor" value="2"> Medio<br>
+      <input type="radio" name="pgrosor" value="3"> Robusto<br>
     </p>
   </section>
     
-  <section id="content9"><!-- Pico grosor -->
+  <section id="content10" class="radio_align"><!-- Pico longitud -->
     <p>
-      9
+      <input type="radio" name="plongitud" value="1" checked> Corto<br>
+      <input type="radio" name="plongitud" value="2"> Medio<br>
+      <input type="radio" name="plongitud" value="3"> Largo<br>
     </p>
   </section>
-    
-  <section id="content10"><!-- Pico longitud -->
+  <section id="content11" class="radio_align"><!-- Alimento -->
     <p>
-      10
-    </p>
-  </section>
-  <section id="content11"><!-- Alimento -->
-    <p>
-      11
+      <input type="radio" name="alimento" value="1" checked> Granívoro<br>
+      <input type="radio" name="alimento" value="2"> Insectívoro<br>
+      <input type="radio" name="alimento" value="3"> Omnívoro<br>
+      <input type="radio" name="alimento" value="4"> Carnívoro<br>
+      <input type="radio" name="alimento" value="3"> Herbívoro<br>
     </p>
   </section>
 
@@ -253,6 +345,29 @@
         </tr>
     </table>
     </div>
+<!-- 
+    <?php
+    if (isset($_GET['i']))
+    {
+        page($_GET['i']);
+    }
+
+    function page($res)//fonction changement d'onglet
+    {
+        echo "<h1>lol</h1>";
+    }
+    ?>
+
+    <a href="?i=1">
+    <div id="back">
+      <img id="back" src="../img/precedent.png" alt="back" />
+    </div>
+    </a>
+    <a href="?i=2">
+    <div id="next">
+      <img id="next" src="../img/suivant.png" alt="next" />
+    </div> -->
+    </a>
 </main>
 
 
