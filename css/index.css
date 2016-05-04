@@ -243,8 +243,9 @@ a {
 .onglet_0{ /* Onglet inactif */ 
   background:#209BDE;
   border-radius: 7px 7px 7px 7px;
+  margin-bottom:-5px;
   height: 30px;
-  width: 20px;
+  width: 40px;
   opacity: 0.6;
 }
 .onglet_1{ /* Onglet actif */
@@ -318,11 +319,11 @@ a {
   .onglet_0{ /* Onglet inactif */ 
     height: 25px;
     width: 20px;
+    margin-bottom:0;
   }
 
    .onglet_1{ /* Onglet actif */ 
     height: 30px;
-    width: 80px;
   }
 
   .radio_align{
@@ -351,11 +352,12 @@ a {
   .onglet_0{ /* Onglet inactif */ 
     height: 20px;
     width: 15px;
+    margin-bottom:-5px;
+
   }
 
    .onglet_1{ /* Onglet actif */ 
     height: 30px;
-    width: 80px;
   }
 
   .back {
