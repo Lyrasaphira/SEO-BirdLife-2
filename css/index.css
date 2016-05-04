@@ -138,6 +138,16 @@ header #info{
   right:10px;
 }
 
+#titredescription{
+  color:#000;
+  font-size: 20px;
+  padding:20px 0 0 20px;
+}
+#description{
+  color:#000;
+  text-align: justify;
+}
+
 #title h2{/*IDENTIFICAR AVES*/
   position:relative;
   top:85px;
