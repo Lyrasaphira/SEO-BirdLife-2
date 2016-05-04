@@ -1,33 +1,13 @@
 <!DOCTYPE html>
-<!--
-    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
-
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
     <!-- Good default declaration:
     * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
     * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
@@ -35,358 +15,418 @@
         * Enable inline JS: add 'unsafe-inline' to default-src
         * Enable eval(): add 'unsafe-eval' to default-src
     * Create your own at http://cspisawesome.com
-    -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+  -->
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
-    <link rel="stylesheet" type="text/css" href="../css/index.css" />
-    <title>SEO BirdLife</title>
+  <link rel="stylesheet" type="text/css" href="../css/index.css" />
+  <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700,400,300' rel='stylesheet' type='text/css'>
+  <title>SEO BirdLife</title>
 </head>
 
 <body>
-    <div class="app">
-       <!--<div class="loader">
-       </div>-->
-<main>
-    <nav>
-      <h2> </h2>
-      <a href="../index.html"><img id="home" src="../img/home.png" alt="home" /></a>
-      <div id="logo_container"><img id="logo" src="../img/logo_3.png" alt="logo"/></div>
-      <a href="menu.html"><img id="burger" src="../img/burger.png" alt="menu" /></a>
-    </nav>
-    <div id="title">
-      <h2>IDENTIFICAR AVES</h2>
-    </div>
+  <div class="app">
+    <main>
+      <header>
+        <h2> </h2>
+        <a href="../index.html"><img id="home" src="../img/home.png" alt="home" /></a>
+        <div id="logo_container"><img id="logo" src="../img/logo_3.png" alt="logo"/></div>
+        <a href="http://www.seo.org" target="_blank"><img id="info" src="../img/info.png" alt="menu" /></a>
+      </header>
+      <div id="title">
+        <h2>IDENTIFICAR AVES</h2>
+      </div>
 
-  <div id="fond"><!--<img src="../fond.jpg" />-->
+      <div class="background">
+        <img src="../fond.jpg"/>
+      </div>
+      <div class="bloc">
+        <div class="systeme_onglets">
+          <div class="onglets">
+            <span class="onglet_0 onglet" id="onglet_distribucion" onclick="javascript:change_onglet('distribucion');"><p>DISTRIBUCIÓN</p></span>
+            
+            <span class="onglet_0 onglet" id="onglet_tamano" onclick="javascript:change_onglet('tamano');"><p>TAMAÑO</p></span>
 
-  <input class="menu" id="tab1" type="radio" name="tabs" checked>
-  <label for="tab1" id="n1"><p>DISTRIBUCIÓN</p></label>
-    
-  <input class="menu" id="tab2" type="radio" name="tabs"> <?php // echo $tab2 ?>
-  <label for="tab2" id="n2"><p>TAMAÑO</p></label>
-    
-  <input class="menu" id="tab3" type="radio" name="tabs">
-  <label for="tab3" id="n3"><p>COLOR</p></label>
-    
-  <input class="menu" id="tab4" type="radio" name="tabs">
-  <label for="tab4" id="n4"><p>HABITAT/PAISAJE</p></label>
+            <span class="onglet_0 onglet" id="onglet_color" onclick="javascript:change_onglet('color');"><p>COLOR</p></span>
 
-  <input class="menu" id="tab5" type="radio" name="tabs">
-  <label for="tab5" id="n5"><p>COMPORTAMIENTO</p></label>
-    
-  <input class="menu" id="tab6" type="radio" name="tabs">
-  <label for="tab6" id="n6"><p>COLOR PATAS</p></label>
-    
-  <input class="menu" id="tab7" type="radio" name="tabs">
-  <label for="tab7" id="n7"><p>PICO FORMA</p></label>
-    
-  <input class="menu" id="tab8" type="radio" name="tabs">
-  <label for="tab8" id="n8"><p>PICO COLOR</p></label>
+            <span class="onglet_0 onglet" id="onglet_habitat" onclick="javascript:change_onglet('habitat');"><p>HABITAT/PAISAJE</p></span>
+            
+            <span class="onglet_0 onglet" id="onglet_comportamiento" onclick="javascript:change_onglet('comportamiento');"><p>COMPORTAMIENTO</p></span>
+            
+            <span class="onglet_0 onglet" id="onglet_colorpatas" onclick="javascript:change_onglet('colorpatas');"><p>COLOR PATAS</p></span>
+            
+            <span class="onglet_0 onglet" id="onglet_picoforma" onclick="javascript:change_onglet('picoforma');"><p>PICO FORMA</p></span>
+            
+            <span class="onglet_0 onglet" id="onglet_picocolor" onclick="javascript:change_onglet('picocolor');"><p>PICO COLOR</p></span>
+            
+            <span class="onglet_0 onglet" id="onglet_picogrosor" onclick="javascript:change_onglet('picogrosor');"><p>PICO GROSOR</p></span>
+            
+            <span class="onglet_0 onglet" id="onglet_picolongitud" onclick="javascript:change_onglet('picolongitud');"><p>PICO LONGITUD</p></span>
+            
+            <span class="onglet_0 onglet" id="onglet_alimento" onclick="javascript:change_onglet('alimento');"><p>ALIMENTO</p></span>
+          </div>
+          <div class="contenu_onglets">
 
-  <input class="menu" id="tab9" type="radio" name="tabs">
-  <label for="tab9" id="n9"><p>PICO GROSOR</p></label>
-    
-  <input class="menu" id="tab10" type="radio" name="tabs">
-  <label for="tab10" id="n10"><p>PICO LONGITUD</p></label>
-    
-  <input class="menu" id="tab11" type="radio" name="tabs">
-  <label for="tab11" id="n11"><p>ALIMENTO</p></label>
-    
-  <section id="content1"><!-- Distribucion -->
-    <table>
-        <tr>
-            <td><label><input type="checkbox" id="c1box1" value="checkbox_01" checked> Peninsula</label></td>
-            <td><label><input type="checkbox" id="c1box2" value="checkbox_02"> Canarias</label></td>
-        </tr>
-        <tr>
-            <td><label><input type="checkbox" id="c1box3" value="checkbox_03"> Baleares</label></td>
-            <td><label><input type="checkbox" id="c1box4" value="checkbox_04"> Norte de Africa</label></td>
-        </tr>
-    </table>
-  </section>
-    
-  <section id="content2" class="radio_align"><!-- Tamano -->
-    <p>
-      <input type="radio" name="tamano" value="1" checked> Como un gorrión o más pequeño<br>
-      <input type="radio" name="tamano" value="2"> Entre un gorrión y un mirlo <br>
-      <input type="radio" name="tamano" value="3"> Entre un mirlo y una paloma<br>
-      <input type="radio" name="tamano" value="4"> Entre una paloma y un pato<br>
-      <input type="radio" name="tamano" value="5"> Más grande que un pato<br>
-    </p>
-  </section>
-    
-  <section id="content3"><!-- Color -->
-    <table>
-        <tr>
-            <td><label><input type="checkbox" id="c3box1" value="c3box1" checked> Blanco</label></td>
-            <td><label><input type="checkbox" id="c3box2" value="c3box2"> Negro</label></td>
-        </tr>
-        <tr>
-            <td><label><input type="checkbox" id="c3box3" value="c3box3"> Gris</label></td>
-            <td><label><input type="checkbox" id="c3box4" value="c3box4"> Crema</label></td>
-        </tr>
-        <tr>
-            <td><label><input type="checkbox" id="c3box5" value="c3box5"> Naranja</label></td>
-            <td><label><input type="checkbox" id="c3box6" value="c3box6"> Amarillo</label></td>
-        </tr>
-        <tr>
-            <td><label><input type="checkbox" id="c3box7" value="c3box7"> Rojo</label></td>
-            <td><label><input type="checkbox" id="c3box8" value="c3box8"> Verde</label></td>
-        </tr>
-        <tr>
-            <td><label><input type="checkbox" id="c3box9" value="c3box9"> Azul</label></td>
-            <td><label><input type="checkbox" id="c3box10" value="c3box10"> Marrón</label></td>
-        </tr>
-        <tr>
-            <td><label><input type="checkbox" id="c3box11" value="c3box11"> Rosa</label></td>
-            <td></td>
-        </tr>
-    </table>
-  </section>
-    
-  <section id="content4"><!-- Habitat/Paisaje -->
-    <table>
-        <tr>
-            <td><label><input type="checkbox" id="c4box1" value="c4box1" checked> Bosque/Árboles</label></td>
-            <td><label><input type="checkbox" id="c4box2" value="c4box2"> Arbustos</label></td>
-        </tr>
-        <tr>
-            <td><label><input type="checkbox" id="c4box3" value="c4box3"> Pastizales/Herbazales</label></td>
-            <td><label><input type="checkbox" id="c4box4" value="c4box4"> Agrícolas</label></td>
-        </tr>
-        <tr>
-            <td><label><input type="checkbox" id="c4box5" value="c4box5"> Humedales</label></td>
-            <td><label><input type="checkbox" id="c4box6" value="c4box6"> Urbanos</label></td>
-        </tr>
-        <tr>
-            <td><label><input type="checkbox" id="c4box7" value="c4box7"> Costa</label></td>
-            <td></td>
-        </tr>
-    </table>
-  </section>
+            <!-- DISTRIBUCION -->
+            <div class="contenu_onglet" id="contenu_onglet_distribucion">
+              <table>
+                <tr>
+                  <td><label><input type="checkbox" id="c1box1" value="checkbox_01" checked> Peninsula</label></td>
+                  <td><label><input type="checkbox" id="c1box2" value="checkbox_02"> Canarias</label></td>
+                </tr>
+                <tr>
+                  <td><label><input type="checkbox" id="c1box3" value="checkbox_03"> Baleares</label></td>
+                  <td><label><input type="checkbox" id="c1box4" value="checkbox_04"> Norte de Africa</label></td>
+                </tr>
+              </table>
+              <!-- -->
+              <div class="fleches">
+                <div class="next" onclick="javascript:change_onglet('tamano');"> <svg id="next" src="../img/next.svg" alt="next"/></div>
+              </div>
+            </div>
 
-  <section id="content5"><!-- Comportamiento -->
-    <table>
-        <tr>
-            <td><label><input type="checkbox" id="c5box1" value="c5box1" checked> En un bando o grupo</label>
-        </tr>
-        <tr>
-            <td><label><input type="checkbox" id="c5box2" value="c5box2"> En un comedero de aves</label></td>
-        </tr>
-        <tr>
-            <td><label><input type="checkbox" id="c5box3" value="c5box3"> Cazando o comiendo insectos</label></td>
-        </tr>
-        <tr>
-            <td><label><input type="checkbox" id="c5box4" value="c5box4"> Alimentándose de frutos</label></td>
-        </tr>
-        <tr>
-            <td><label><input type="checkbox" id="c5box5" value="c5box5" checked> Alimentándose de otras aves, pollos, huevos</label>
-        </tr>
-        <tr>
-            <td><label><input type="checkbox" id="c5box6" value="c5box6"> Caminando</label></td>
-        </tr>
-        <tr>
-            <td><label><input type="checkbox" id="c5box7" value="c5box7"> Saltando/dando saltitos</label></td>
-        </tr>
-        <tr>
-            <td><label><input type="checkbox" id="c5box8" value="c5box8"> Cola que mueve rápidamente</label></td>
-        </tr>
-        <tr>
-            <td><label><input type="checkbox" id="c5box9" value="c5box9" checked> Buceando</label>
-        </tr>
-    </table>
-  </section>
-    
-  <section id="content6"><!-- Color patas -->
-    <table>
-        <tr>
-            <td><label><input type="checkbox" id="c6box1" value="c6box1" checked> Blanco</label></td>
-            <td><label><input type="checkbox" id="c6box2" value="c6box2"> Negro</label></td>
-        </tr>
-        <tr>
-            <td><label><input type="checkbox" id="c6box3" value="c6box3"> Naranja</label></td>
-            <td><label><input type="checkbox" id="c6box4" value="c6box4"> Amarillo</label></td>
-        </tr>
-        <tr>
-            <td><label><input type="checkbox" id="c6box5" value="c6box5"> Rojo</label></td>
-            <td><label><input type="checkbox" id="c6box6" value="c6box6"> Verde</label></td>
-        </tr>
-        <tr>
-            <td><label><input type="checkbox" id="c6box7" value="c6box7"> Azul</label></td>
-            <td><label><input type="checkbox" id="c6box8" value="c6box8"> Marrón</label></td>
-        </tr>
-        <tr>
-            <td><label><input type="checkbox" id="c6box9" value="c6box9"> Rosa</label></td>
-            <td></td>
-        </tr>
-    </table>
-  </section>
-    
-  <section id="content7" class="radio_align"><!-- Pico forma -->
-    <p>
-      <input type="radio" name="pforma" value="1" checked> Ganchudo<br>
-      <input type="radio" name="pforma" value="2"> Curvado<br>
-      <input type="radio" name="pforma" value="3"> Pico de pato<br>
-      <input type="radio" name="pforma" value="4"> Pico poderoso<br>
-    </p>
-  </section>
-  <section id="content8"><!-- Pico color -->
-    <table>
-        <tr>
-            <td><label><input type="checkbox" id="c8box1" value="c8box1" checked> Blanco</label></td>
-            <td><label><input type="checkbox" id="c8box2" value="c6box2"> Negro</label></td>
-        </tr>
-        <tr>
-            <td><label><input type="checkbox" id="c8box3" value="c8box3"> Naranja</label></td>
-            <td><label><input type="checkbox" id="c8box4" value="c8box4"> Amarillo</label></td>
-        </tr>
-        <tr>
-            <td><label><input type="checkbox" id="c8box5" value="c8box5"> Rojo</label></td>
-            <td><label><input type="checkbox" id="c8box6" value="c8box6"> Verde</label></td>
-        </tr>
-        <tr>
-            <td><label><input type="checkbox" id="c8box7" value="c8box7"> Azul</label></td>
-            <td><label><input type="checkbox" id="c8box8" value="c8box8"> Marrón</label></td>
-        </tr>
-        <tr>
-            <td><label><input type="checkbox" id="c8box9" value="c8box9"> Rosa</label></td>
-            <td></td>
-        </tr>
-    </table>
-  </section>
-    
-  <section id="content9" class="radio_align"><!-- Pico grosor -->
-    <p>
-      <input type="radio" name="pgrosor" value="1" checked> Fino<br>
-      <input type="radio" name="pgrosor" value="2"> Medio<br>
-      <input type="radio" name="pgrosor" value="3"> Robusto<br>
-    </p>
-  </section>
-    
-  <section id="content10" class="radio_align"><!-- Pico longitud -->
-    <p>
-      <input type="radio" name="plongitud" value="1" checked> Corto<br>
-      <input type="radio" name="plongitud" value="2"> Medio<br>
-      <input type="radio" name="plongitud" value="3"> Largo<br>
-    </p>
-  </section>
-  <section id="content11" class="radio_align"><!-- Alimento -->
-    <p>
-      <input type="radio" name="alimento" value="1" checked> Granívoro<br>
-      <input type="radio" name="alimento" value="2"> Insectívoro<br>
-      <input type="radio" name="alimento" value="3"> Omnívoro<br>
-      <input type="radio" name="alimento" value="4"> Carnívoro<br>
-      <input type="radio" name="alimento" value="3"> Herbívoro<br>
-    </p>
-  </section>
+            <!-- TAMAÑO -->
+            <div class="contenu_onglet" id="contenu_onglet_tamano">
+             <p class="radio_align">
+              <input type="radio" name="tamano" value="1" checked> Como un gorrión o más pequeño<br>
+              <input type="radio" name="tamano" value="2"> Entre un gorrión y un mirlo <br>
+              <input type="radio" name="tamano" value="3"> Entre un mirlo y una paloma<br>
+              <input type="radio" name="tamano" value="4"> Entre una paloma y un pato<br>
+              <input type="radio" name="tamano" value="5"> Más grande que un pato<br>
+            </p>
+            <!-- -->
+            <div class="fleches">
+              <div class="back" onclick="javascript:change_onglet('distribucion');"><svg id="back" src="../img/back.svg" alt="back"/></div>
+              <div class="next" onclick="javascript:change_onglet('color');"> <svg id="next" src="../img/next.svg" alt="next"/></div>
+            </div>
+          </div>
 
-    </div>
-    <div id="oiseaux">
+          <!-- COLOR -->
+          <div class="contenu_onglet" id="contenu_onglet_color">
+            <table>
+              <tr>
+                <td><label><input type="checkbox" id="c3box1" value="c3box1" checked> Blanco</label></td>
+                <td><label><input type="checkbox" id="c3box2" value="c3box2"> Negro</label></td>
+              </tr>
+              <tr>
+                <td><label><input type="checkbox" id="c3box3" value="c3box3"> Gris</label></td>
+                <td><label><input type="checkbox" id="c3box4" value="c3box4"> Crema</label></td>
+              </tr>
+              <tr>
+                <td><label><input type="checkbox" id="c3box5" value="c3box5"> Naranja</label></td>
+                <td><label><input type="checkbox" id="c3box6" value="c3box6"> Amarillo</label></td>
+              </tr>
+              <tr>
+                <td><label><input type="checkbox" id="c3box7" value="c3box7"> Rojo</label></td>
+                <td><label><input type="checkbox" id="c3box8" value="c3box8"> Verde</label></td>
+              </tr>
+              <tr>
+                <td><label><input type="checkbox" id="c3box9" value="c3box9"> Azul</label></td>
+                <td><label><input type="checkbox" id="c3box10" value="c3box10"> Marrón</label></td>
+              </tr>
+              <tr>
+                <td><label><input type="checkbox" id="c3box11" value="c3box11"> Rosa</label></td>
+                <td></td>
+              </tr>
+            </table>
+            <!-- -->
+            <div class="fleches">
+              <div class="back" onclick="javascript:change_onglet('tamano');"><svg id="back" src="../img/back.svg" alt="back"/></div>
+              <div class="next" onclick="javascript:change_onglet('habitat');"> <svg id="next" src="../img/next.svg" alt="next"/></div>
+            </div>
+          </div>
+
+          <!-- HABITAT/PAYSAJE -->
+          <div class="contenu_onglet" id="contenu_onglet_habitat">
+            <table>
+              <tr>
+                <td><label><input type="checkbox" id="c4box1" value="c4box1" checked> Bosque/Árboles</label></td>
+                <td><label><input type="checkbox" id="c4box2" value="c4box2"> Arbustos</label></td>
+              </tr>
+              <tr>
+                <td><label><input type="checkbox" id="c4box3" value="c4box3"> Pastizales/Herbazales</label></td>
+                <td><label><input type="checkbox" id="c4box4" value="c4box4"> Agrícolas</label></td>
+              </tr>
+              <tr>
+                <td><label><input type="checkbox" id="c4box5" value="c4box5"> Humedales</label></td>
+                <td><label><input type="checkbox" id="c4box6" value="c4box6"> Urbanos</label></td>
+              </tr>
+              <tr>
+                <td><label><input type="checkbox" id="c4box7" value="c4box7"> Costa</label></td>
+                <td></td>
+              </tr>
+            </table>
+            <!-- -->
+            <div class="fleches">
+              <div class="back" onclick="javascript:change_onglet('color');"><svg id="back" src="../img/back.svg" alt="back"/></div>
+              <div class="next" onclick="javascript:change_onglet('comportamiento');"> <svg id="next" src="../img/next.svg" alt="next"/></div>
+            </div>
+          </div>
+
+          <!-- COMPORTAMIENTO -->
+          <div class="contenu_onglet" id="contenu_onglet_comportamiento">
+           <table>
+            <tr>
+              <td><label><input type="checkbox" id="c5box1" value="c5box1" checked> En un bando o grupo</label>
+              </tr>
+              <tr>
+                <td><label><input type="checkbox" id="c5box2" value="c5box2"> En un comedero de aves</label></td>
+              </tr>
+              <tr>
+                <td><label><input type="checkbox" id="c5box3" value="c5box3"> Cazando o comiendo insectos</label></td>
+              </tr>
+              <tr>
+                <td><label><input type="checkbox" id="c5box4" value="c5box4"> Alimentándose de frutos</label></td>
+              </tr>
+              <tr>
+                <td><label><input type="checkbox" id="c5box5" value="c5box5" checked> Alimentándose de otras aves, pollos, huevos</label>
+                </tr>
+                <tr>
+                  <td><label><input type="checkbox" id="c5box6" value="c5box6"> Caminando</label></td>
+                </tr>
+                <tr>
+                  <td><label><input type="checkbox" id="c5box7" value="c5box7"> Saltando/dando saltitos</label></td>
+                </tr>
+                <tr>
+                  <td><label><input type="checkbox" id="c5box8" value="c5box8"> Cola que mueve rápidamente</label></td>
+                </tr>
+                <tr>
+                  <td><label><input type="checkbox" id="c5box9" value="c5box9" checked> Buceando</label>
+                  </tr>
+                </table>
+                <!-- -->
+                <div class="fleches">
+                  <div class="back" onclick="javascript:change_onglet('habitat');"><svg id="back" src="../img/back.svg" alt="back"/></div>
+                  <div class="next" onclick="javascript:change_onglet('colorpatas');"> <svg id="next" src="../img/next.svg" alt="next"/></div>
+                </div>
+              </div>
+
+              <!-- COLOR PATAS -->
+              <div class="contenu_onglet" id="contenu_onglet_colorpatas">
+                <table>
+                  <tr>
+                    <td><label><input type="checkbox" id="c6box1" value="c6box1" checked> Blanco</label></td>
+                    <td><label><input type="checkbox" id="c6box2" value="c6box2"> Negro</label></td>
+                  </tr>
+                  <tr>
+                    <td><label><input type="checkbox" id="c6box3" value="c6box3"> Naranja</label></td>
+                    <td><label><input type="checkbox" id="c6box4" value="c6box4"> Amarillo</label></td>
+                  </tr>
+                  <tr>
+                    <td><label><input type="checkbox" id="c6box5" value="c6box5"> Rojo</label></td>
+                    <td><label><input type="checkbox" id="c6box6" value="c6box6"> Verde</label></td>
+                  </tr>
+                  <tr>
+                    <td><label><input type="checkbox" id="c6box7" value="c6box7"> Azul</label></td>
+                    <td><label><input type="checkbox" id="c6box8" value="c6box8"> Marrón</label></td>
+                  </tr>
+                  <tr>
+                    <td><label><input type="checkbox" id="c6box9" value="c6box9"> Rosa</label></td>
+                    <td></td>
+                  </tr>
+                </table>
+                <!-- -->
+                <div class="fleches">
+                  <div class="back" onclick="javascript:change_onglet('comportamiento');"><svg id="back" src="../img/back.svg" alt="back"/></div>
+                  <div class="next" onclick="javascript:change_onglet('picoforma');"> <svg id="next" src="../img/next.svg" alt="next"/></div>
+                </div>
+              </div>
+
+              <!-- PICO FORMA -->
+              <div class="contenu_onglet" id="contenu_onglet_picoforma">
+                <p class="radio_align">
+                  <input type="radio" name="pforma" value="1" checked> Ganchudo<br>
+                  <input type="radio" name="pforma" value="2"> Curvado<br>
+                  <input type="radio" name="pforma" value="3"> Pico de pato<br>
+                  <input type="radio" name="pforma" value="4"> Pico poderoso<br>
+                </p>
+                <!-- -->
+                <div class="fleches">
+                  <div class="back" onclick="javascript:change_onglet('colorpatas');"><svg id="back" src="../img/back.svg" alt="back"/></div>
+                  <div class="next" onclick="javascript:change_onglet('picocolor');"> <svg id="next" src="../img/next.svg" alt="next"/></div>
+                </div>
+              </div>
+
+              <!-- PICO COLOR -->
+              <div class="contenu_onglet" id="contenu_onglet_picocolor">
+                <table>
+                  <tr>
+                    <td><label><input type="checkbox" id="c8box1" value="c8box1" checked> Blanco</label></td>
+                    <td><label><input type="checkbox" id="c8box2" value="c6box2"> Negro</label></td>
+                  </tr>
+                  <tr>
+                    <td><label><input type="checkbox" id="c8box3" value="c8box3"> Naranja</label></td>
+                    <td><label><input type="checkbox" id="c8box4" value="c8box4"> Amarillo</label></td>
+                  </tr>
+                  <tr>
+                    <td><label><input type="checkbox" id="c8box5" value="c8box5"> Rojo</label></td>
+                    <td><label><input type="checkbox" id="c8box6" value="c8box6"> Verde</label></td>
+                  </tr>
+                  <tr>
+                    <td><label><input type="checkbox" id="c8box7" value="c8box7"> Azul</label></td>
+                    <td><label><input type="checkbox" id="c8box8" value="c8box8"> Marrón</label></td>
+                  </tr>
+                  <tr>
+                    <td><label><input type="checkbox" id="c8box9" value="c8box9"> Rosa</label></td>
+                    <td></td>
+                  </tr>
+                </table>
+                <!-- -->
+                <div class="fleches">
+                  <div class="back" onclick="javascript:change_onglet('picoforma');"><svg id="back" src="../img/back.svg" alt="back"/></div>
+                  <div class="next" onclick="javascript:change_onglet('picogrosor');"> <svg id="next" src="../img/next.svg" alt="next"/></div>
+                </div>
+              </div>
+
+              <!-- PICO GROSOR -->
+              <div class="contenu_onglet" id="contenu_onglet_picogrosor">
+                <p class="radio_align">
+                  <input type="radio" name="pgrosor" value="1" checked> Fino<br>
+                  <input type="radio" name="pgrosor" value="2"> Medio<br>
+                  <input type="radio" name="pgrosor" value="3"> Robusto<br>
+                </p>
+                <!-- -->
+                <div class="fleches">
+                  <div class="back" onclick="javascript:change_onglet('picocolor');"><svg id="back" src="../img/back.svg" alt="back"/></div>
+                  <div class="next" onclick="javascript:change_onglet('picolongitud');"> <svg id="next" src="../img/next.svg" alt="next"/></div>
+                </div>
+              </div>
+
+              <!-- PICO LONGITUD -->
+              <div class="contenu_onglet" id="contenu_onglet_picolongitud">
+                <p class="radio_align">
+                  <input type="radio" name="plongitud" value="1" checked> Corto<br>
+                  <input type="radio" name="plongitud" value="2"> Medio<br>
+                  <input type="radio" name="plongitud" value="3"> Largo<br>
+                </p>
+                <!-- -->
+                <div class="fleches">
+                  <div class="back" onclick="javascript:change_onglet('picogrosor');"><svg id="back" src="../img/back.svg" alt="back"/></div>
+                  <div class="next" onclick="javascript:change_onglet('alimento');"> <svg id="next" src="../img/next.svg" alt="next"/></div>
+                </div>
+              </div>
+
+              <!-- ALIMENTO -->
+              <div class="contenu_onglet" id="contenu_onglet_alimento">
+               <p class="radio_align">
+                <input type="radio" name="alimento" value="1" checked> Granívoro<br>
+                <input type="radio" name="alimento" value="2"> Insectívoro<br>
+                <input type="radio" name="alimento" value="3"> Omnívoro<br>
+                <input type="radio" name="alimento" value="4"> Carnívoro<br>
+                <input type="radio" name="alimento" value="3"> Herbívoro<br>
+              </p>
+              <!-- -->
+              <div class="fleches">
+                <div class="back" onclick="javascript:change_onglet('picogrosor');"><svg id="back" src="../img/back.svg" alt="back"/></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="fleches">
+        <svg id="back" src="../img/back.svg" alt="back"/>
+        <svg id="next" src="../img/next.svg" alt="next"/>
+      </div> -->
+
+      <div id="oiseaux">
         <table>
-        <tr>
+          <tr>
             <td><img class="imgoiseau" src="../img/bird_01.jpg"/></td>
             <td><img class="imgoiseau" src="../img/bird_02.jpg"/></td>
             <td><img class="imgoiseau" src="../img/bird_03.jpg"/></td>
             <td><img class="imgoiseau" src="../img/bird_04.jpg"/></td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td><p>Lorem ipsum</p></td>
             <td><p>Lorem ipsum</p></td>
             <td><p>Lorem ipsum</p></td>
             <td><p>Lorem ipsum</p></td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td><img class="imgoiseau" src="../img/bird_04.jpg"/></td>
             <td><img class="imgoiseau" src="../img/bird_03.jpg"/></td>
             <td><img class="imgoiseau" src="../img/bird_02.jpg"/></td>
             <td><img class="imgoiseau" src="../img/bird_01.jpg"/></td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td><p>Lorem ipsum</p></td>
             <td><p>Lorem ipsum</p></td>
             <td><p>Lorem ipsum</p></td>
             <td><p>Lorem ipsum</p></td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td><img class="imgoiseau" src="../img/bird_01.jpg"/></td>
             <td><img class="imgoiseau" src="../img/bird_02.jpg"/></td>
             <td><img class="imgoiseau" src="../img/bird_03.jpg"/></td>
             <td><img class="imgoiseau" src="../img/bird_04.jpg"/></td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td><p>Lorem ipsum</p></td>
             <td><p>Lorem ipsum</p></td>
             <td><p>Lorem ipsum</p></td>
             <td><p>Lorem ipsum</p></td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td><img class="imgoiseau" src="../img/bird_04.jpg"/></td>
             <td><img class="imgoiseau" src="../img/bird_03.jpg"/></td>
             <td><img class="imgoiseau" src="../img/bird_02.jpg"/></td>
             <td><img class="imgoiseau" src="../img/bird_01.jpg"/></td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td><p>Lorem ipsum</p></td>
             <td><p>Lorem ipsum</p></td>
             <td><p>Lorem ipsum</p></td>
             <td><p>Lorem ipsum</p></td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td><img class="imgoiseau" src="../img/bird_01.jpg"/></td>
             <td><img class="imgoiseau" src="../img/bird_02.jpg"/></td>
             <td><img class="imgoiseau" src="../img/bird_03.jpg"/></td>
             <td><img class="imgoiseau" src="../img/bird_04.jpg"/></td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td><p>Lorem ipsum</p></td>
             <td><p>Lorem ipsum</p></td>
             <td><p>Lorem ipsum</p></td>
             <td><p>Lorem ipsum</p></td>
-        </tr>
-    </table>
-    </div>
-<!-- 
-    <?php
-    if (isset($_GET['i']))
-    {
-        page($_GET['i']);
-    }
-
-    function page($res)//fonction changement d'onglet
-    {
-        echo "<h1>lol</h1>";
-    }
-    ?>
-
-    <a href="?i=1">
-    <div id="back">
-      <img id="back" src="../img/precedent.png" alt="back" />
-    </div>
-    </a>
-    <a href="?i=2">
-    <div id="next">
-      <img id="next" src="../img/suivant.png" alt="next" />
-    </div> -->
-    </a>
-</main>
+          </tr>
+        </table>
+      </div>
+    </main>
 
 
-    </div>
-    <script type="text/javascript" src="../cordova.js"></script>
-    <script type="text/javascript" src="../js/index.js"></script>
-    <script type="text/javascript" src="../js/css_auto-reload.js"></script>
-    <script type="text/javascript">
-        app.initialize();
-    </script>
-    <script type="text/javascript">
-         document.styleSheets.start_autoreload(100)
-    </script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-<script type="text/javascript">
-$(window).load(function() {
-    $(".loader").fadeOut("1000");
-})
-</script>
-</body>
+  </div>
+  <script type="text/javascript" src="../cordova.js"></script>
+  <script type="text/javascript" src="../js/index.js"></script>
+  <script type="text/javascript" src="../js/css_auto-reload.js"></script>
+  <script type="text/javascript">
+  app.initialize();
+  </script>
 
-</html>
+  <script>
+  function change_onglet(name)
+  {
+    document.getElementById('onglet_'+anc_onglet).className = 'onglet_0 onglet';
+    document.getElementById('onglet_'+name).className = 'onglet_1 onglet';
+    document.getElementById('contenu_onglet_'+anc_onglet).style.display = 'none';
+    document.getElementById('contenu_onglet_'+name).style.display = 'block';
+    anc_onglet = name;
+  }
+  </script>
+  <script type="text/javascript">
+        //<!--
+        var anc_onglet = 'distribucion';
+        change_onglet(anc_onglet);
+        //-->
+        </script> 
+        <!--<script type="text/javascript">
+        document.styleSheets.start_autoreload(100)
+        </script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript">
+        $(window).load(function() {
+          $(".loader").fadeOut("1000");
+        });
+      </script>-->
+    </body>
+
+    </html>

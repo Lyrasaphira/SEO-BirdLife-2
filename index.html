@@ -1,61 +1,52 @@
-<!DOCTYPE html>
-<html>
+  <!DOCTYPE html>
+  <html>
 
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
     <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
-    <!-- Good default declaration:
-    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-        * Enable inline JS: add 'unsafe-inline' to default-src
-        * Enable eval(): add 'unsafe-eval' to default-src
-    * Create your own at http://cspisawesome.com
-    -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
-
     <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700,400,300' rel='stylesheet' type='text/css'>
     <title>SEO BirdLife</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="app">
-       <!--<div class="loader">
-       </div>-->
-<main style="min-height:100vh;">
-    <nav>
-      <h2> </h2>
-      <a href="index.html"><img id="home" src="img/home.png" alt="home" /></a>
-      <div id="logo_container"><img id="logo" src="img/logo_3.png" alt="logo"/></div>
-      <a href="html/menu.html"><img id="burger" src="img/burger.png" alt="menu" /></a>
-    </nav>
+      <main style="min-height:100vh;">
+        <header>
+          <h2> </h2>
+          <a href="index.html"><img id="home" src="img/home.png" alt="home" /></a>
+          <div id="logo_container"><img id="logo" src="img/logo_3.png" alt="logo"/></div>
+          <a href="http://www.seo.org"><img id="info" src="img/info.png" alt="menu" /></a>
+        </header>
 
-  <div id="fond" style="padding-top:40%;margin-top:50px;"></div>
-  <h1 id="titredescription">SEO BIRDLIFE</h1>
-  <p id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu quam non arcu auctor facilisis eget vel felis. Praesent in ullamcorper ipsum, ut ullamcorper mi. Cras ut est sit amet ex rhoncus pretium nec ut diam. Nulla felis erat, cursus eu magna vel, tristique iaculis nibh. Maecenas feugiat cursus nunc, quis convallis nibh sodales in.</p>
-  <a href="html/aves.html"><h1 id="start" style="font-decoration:none;">COMENZAR</h1></a>
-</main>
+        <div class="fond">
+          <img src="fond.jpg"/>
+        </div>
+        <h1 id="titredescription">SEO BIRDLIFE</h1>
+        <p id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu quam non arcu auctor facilisis eget vel felis. Praesent in ullamcorper ipsum, ut ullamcorper mi. Cras ut est sit amet ex rhoncus pretium nec ut diam. Nulla felis erat, cursus eu magna vel, tristique iaculis nibh. Maecenas feugiat cursus nunc, quis convallis nibh sodales in.</p>
+        <a href="html/aves.html"><h2 id="start">COMENZAR</h2></a>
+      </main>
 
     </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/css_auto-reload.js"></script>
     <script type="text/javascript">
-        app.initialize();
+    app.initialize();
     </script>
-    <script type="text/javascript">
-         document.styleSheets.start_autoreload(100)
-    </script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-<script type="text/javascript">
-$(window).load(function() {
-    $(".loader").fadeOut("1000");
-})
-</script>
+      <!--<script type="text/javascript">
+           document.styleSheets.start_autoreload(100)
+      </script>
+      <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript">
+  $(window).load(function() {
+      $(".loader").fadeOut("1000");
+  });
+</script>-->
 </body>
 
 </html>
