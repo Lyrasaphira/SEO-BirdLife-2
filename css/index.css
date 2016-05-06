@@ -280,25 +280,24 @@ a {
   margin-top: 0;
   width:100%;
   overflow: hidden;
-  height: 50px;
+  height: 55px;
   background-color: #209BDE;
   color: #fff;
   position: relative;
 }
-.back{
-  background: url('../img/back.svg') no-repeat;
-  float: left;
-  width:72px;
-  margin-left: 5px;
+.back img{
+/*  background: url('../img/back.png') no-repeat;
+*/  float: left;
+  width:75px;
+  margin: 5px;
 }
-.next{
+.next img{
   float: right;
   right:-65px;
-  top:-40px;
-  width:72px;
-  margin-right: 5px;
-  background: url('../img/next.svg') no-repeat;
-}
+  width:75px;
+  margin: 5px;
+/*  background: url('../img/next.png') no-repeat;
+*/}
 .contenu_onglets table{
   position:relative;
   margin: 5% 8% 5% 8%;
@@ -312,7 +311,7 @@ a {
   }
 
   #title h2{
-    top: 100px;
+    top: 130px;
     font-size: 16px;
   }
 
@@ -341,7 +340,7 @@ a {
 
 @media screen and (max-width: 357px) {
   .onglet_1 p {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   #title h2{
@@ -360,11 +359,11 @@ a {
     height: 30px;
   }
 
-  .back {
+  .back img{
     width: 50px;
   }
 
-  .next {
+  .next img{
     width: 50px;
   }
 
