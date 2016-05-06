@@ -1,0 +1,436 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+/** {
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+/*}
+
+body {
+  -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+  /*-webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+  /*-webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    /*);
+
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin: 0px;
+    padding:0px;
+    width:100%;
+}
+
+/* Portrait layout (default) */
+/*.app {
+  /*background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+  /*position:absolute;             /* position in the center of the screen */                 /* text area height */
+  /*width:225px;                   /* text area width */
+    /*text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    /*margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+    /* offset horizontal: half of text area width */
+    /*}*/
+/*
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);*/
+
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700,400,300);
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  /*margin: 2%;*/
+  overflow:hidden;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: 350;
+}
+
+body {
+  color: #555;
+  background: #eee;
+  overflow-y:scroll;
+}
+
+p {
+  padding:20px;
+  line-height: 1.5;
+  color:#fff;
+  text-align:center;
+}
+
+main {
+  padding: 0 0 0 0px;
+  margin: -32px 0 auto;
+  background: #fff;
+}
+
+#oiseaux{
+  margin-top: 0%;
+  width:100%;
+  background-color:#fff;
+  border: 1px solid #ddd;
+  overflow-y: auto;
+  /*min-height:100vh;*/
+}
+
+header{
+  position:fixed;
+  width:100%;
+  height:40px;
+  background-color: #209BDE;
+  top:0px;
+  right:0px;
+  z-index:3;
+}
+
+header h2{ /* Titre SEO BirdLife */
+  position:relative;
+  text-align:center;
+  color:#fff;
+  font-size: 12px;
+  left:100px;
+  top:11px;
+}
+
+header #home{
+  width:35px;
+  position:relative;
+  top:2px;
+  left:10px;
+}
+#logo_container{
+  position:absolute;
+  width:100%;
+  margin:auto;
+  top:3px;
+  left:50%;
+}
+header #logo{
+  height:30px;
+  position:relative;
+  left:-65px;
+  top:1px;
+}
+header #info{
+  width:30px;
+  position:fixed;
+  float:right;
+  top:5px;
+  right:10px;
+}
+
+#titredescription{
+  color:#000;
+  font-size: 20px;
+  padding:20px 0 0 20px;
+}
+#description{
+  color:#000;
+  text-align: justify;
+}
+
+#title h2{/*IDENTIFICAR AVES*/
+  position:relative;
+  top:85px;
+  width:100%;
+  height: 18px;
+  line-height: 0.1;
+  margin:0;
+  padding:8px;
+  background-color:rgba(0,0,0,0.5);
+  text-align:center;
+  color:#fff;
+  font-size: 20px;
+  font-weight: 300;
+  z-index:1;
+}
+
+.background img{
+  /*background-image:url(../fond.jpg);*/
+  /*background-repeat: no-repeat;*/
+  /*background-size:10%;*/
+  /*background-position: center top;*/
+  /*height: 10%;
+  padding-top:30%;*/
+  /*width: 100%;*/
+  /*opacity: 0.5;*/
+  display: block;
+  width: 100%;
+  margin-top: 18px;
+}
+
+.background{
+  position: relative;
+  overflow: hidden;
+  z-index: :-1;
+}
+
+.fond img{
+  margin-top: 70px;
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+#oiseaux table{
+  margin:auto;
+}
+
+#oiseaux p{
+  color:#000;
+  margin:0;
+  padding:0 5px 0 5px;
+  font-weight: 350;
+  font-size:16px;
+}
+
+#oiseaux img{
+  width:100%;
+}
+
+#start { /* Bouton commencer */
+  background-color: #209BDE;
+  width:150px;
+  height:30px;
+  line-height:30px;
+  margin:auto;
+  text-align:center;
+  color:#fff;
+  font-size: 18px;
+  border-radius: 7px 7px 7px 7px;
+  border-bottom: 3px solid #107BBE;
+  position: relative;
+  font-decoration:none;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* //////////////// ONGLETS //////////////// */
+
+.systeme_onglets{ /* Bloc comprenant toute la partie onglets */
+  margin-top: -50px;
+  position: relative;
+  z-index: 2;
+}
+.onglet{ /* Blocs titres onglets */
+  display:inline-block;
+  color: #fff;
+  font-weight: 300;
+}
+.onglet_0{ /* Onglet inactif */ 
+  background:#209BDE;
+  border-radius: 7px 7px 7px 7px;
+  margin-bottom:-5px;
+  height: 30px;
+  width: 40px;
+  opacity: 0.6;
+}
+.onglet_1{ /* Onglet actif */
+  background:#209BDE;
+  border-radius: 7px 7px 0px 0px;
+  opacity: 1;
+  height: 40px;
+}
+.onglet_0 p{ /* Titre onglet inactif */
+  display: none;
+}
+.onglet_1 p{ /* Titre onglet actif */
+  font-size: 20px;
+  padding: 8px;
+  /*line-height: 50%;*/
+}
+.contenu_onglet{
+  background-color:#209BDE;
+  padding:5px;
+  display:none;
+  color: #fff;
+  font-weight: 300;
+  font-size: 20px;
+}
+.radio_align{
+  text-align:justify;
+  margin:auto;
+  width:350px;
+  font-size: 20px;
+}
+.fleches{
+  margin-top: 0;
+  width:100%;
+  overflow: hidden;
+  height: 55px;
+  background-color: #209BDE;
+  color: #fff;
+  position: relative;
+}
+.back img{
+/*  background: url('../img/back.png') no-repeat;
+*/  float: left;
+  width:75px;
+  margin: 5px;
+}
+.next img{
+  float: right;
+  right:-65px;
+  width:75px;
+  margin: 5px;
+/*  background: url('../img/next.png') no-repeat;
+*/}
+.contenu_onglets table{
+  position:relative;
+  margin: 5% 8% 5% 8%;
+  width: 100%;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 728px) {
+  .onglet_1 p {
+    font-size: 16px;
+  }
+
+  #title h2{
+    top: 100px;
+    font-size: 16px;
+  }
+
+  .onglet_0{ /* Onglet inactif */ 
+    height: 25px;
+    width: 20px;
+    margin-bottom:0;
+  }
+
+   .onglet_1{ /* Onglet actif */ 
+    height: 30px;
+  }
+
+  .radio_align{
+    font-size: 16px;
+  }
+
+  .contenu_onglets table{
+    font-size: 16px;
+  }
+
+  #oiseaux p{
+  font-size:14px;
+}
+}
+
+@media screen and (max-width: 357px) {
+  .onglet_1 p {
+    font-size: 10px;
+  }
+
+  #title h2{
+    top: 100px;
+    font-size: 14px;
+  }
+
+  .onglet_0{ /* Onglet inactif */ 
+    height: 20px;
+    width: 15px;
+    margin-bottom:-5px;
+
+  }
+
+   .onglet_1{ /* Onglet actif */ 
+    height: 30px;
+  }
+
+  .back img{
+    width: 50px;
+  }
+
+  .next img{
+    width: 50px;
+  }
+
+  .radio_align{
+    font-size: 12px;
+  }
+
+  .contenu_onglets table{
+    font-size: 12px;
+  }
+
+  #oiseaux p{
+  font-size:12px;
+}
+}
+
+
+
+
+
+  /* ////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////*/
+
+  /* Landscape layout (with min-width) */
+/*@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px; */  /*padding-top + padding-bottom + text area = image height */
+        /*margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+        /* offset horizontal: half of image width and text area width */
+    /*}
+    }*/
+
+    .event {
+      border-radius:4px;
+      -webkit-border-radius:4px;
+      color:#FFFFFF;
+      font-size:12px;
+      margin:0px 30px;
+      padding:2px 0px;
+    }
+
+    .event.listening {
+      background-color:#333333;
+      display:block;
+    }
+
+    .event.received {
+      background-color:#4B946A;
+      display:none;
+    }
+
+    @keyframes fade {
+      from { opacity: 1.0; }
+      50% { opacity: 0.4; }
+      to { opacity: 1.0; }
+    }
+
+    @-webkit-keyframes fade {
+      from { opacity: 1.0; }
+      50% { opacity: 0.4; }
+      to { opacity: 1.0; }
+    }
+
+    .blink {
+      animation:fade 3000ms infinite;
+      -webkit-animation:fade 3000ms infinite;
+    }
+  }
+
