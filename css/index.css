@@ -305,7 +305,7 @@ a {
   font-size: 20px;
 }
 
-@media handheld and (max-width: 728px) {
+@media screen and (max-width: 728px){
   .onglet_1 p {
     font-size: 12px;
   }
@@ -338,7 +338,7 @@ a {
 }
 }
 
-@media handheld and (max-width: 357px) {
+@media screen and (max-width: 357px) {
   .onglet_1 p {
     font-size: 10px;
   }
