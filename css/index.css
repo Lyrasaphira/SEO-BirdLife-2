@@ -307,7 +307,7 @@ a {
 
 @media screen and (max-width: 728px) {
   .onglet_1 p {
-    font-size: 16px;
+    font-size: 12px;
   }
 
   #title h2{
@@ -316,8 +316,8 @@ a {
   }
 
   .onglet_0{ /* Onglet inactif */ 
-    height: 25px;
-    width: 20px;
+    height: 20px;
+    width: 15px;
     margin-bottom:0;
   }
 
@@ -349,8 +349,8 @@ a {
   }
 
   .onglet_0{ /* Onglet inactif */ 
-    height: 15px;
-    width: 10px;
+    height: 20px;
+    width: 15px;
     margin-bottom:-5px;
 
   }
