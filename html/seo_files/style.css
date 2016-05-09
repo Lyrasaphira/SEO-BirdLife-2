@@ -1,0 +1,2362 @@
+/*
+Theme Name: SEO / BirdLife
+Theme URI: http://wordpress.org/
+Description: SEO/BirdLife es la Sociedad Española de Ornitología, una asociación científica y conservacionista fundada en 1954 dedicada al estudio y la conservación de las aves y de la naturaleza. Es por lo tanto la decana de las ONG de conservación de la naturaleza en España, con más de 50 años de actividad ininterrumpida. Está declarada de Utilidad Pública y ha recibido, entre otros muchos premios el Premio Nacional de Medio Ambiente (1994) y el Premio BBVA a la conservación de la biodiversidad (2004).
+Author:
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+Tags: black, blue, white, two-columns, fixed-width, custom-header, custom-background, threaded-comments, sticky-post, translation-ready, microformats, rtl-language-support, editor-style, custom-menu
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    background: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+}
+body {
+    line-height: 1;
+    font-family: verdana;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote {
+    quotes: none;
+}
+blockquote:before, blockquote:after {
+    content: '';
+    content: none;
+}
+del {
+    text-decoration: line-through;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a img {
+    border: none;
+}
+
+/* =Layout -------------------------------------------------------------- */
+/*
+LAYOUT: Two columns
+DESCRIPTION: Two-column fixed layout with one sidebar right of content
+*/
+#container {
+    float: left;
+    width: 100%;
+}
+#content {
+    width: 620px;
+    float: left;
+    margin-left: 10px;
+}
+#primary,
+#secondary, #area-revista {
+    margin-right: 10px;
+    float: right;
+    overflow: hidden;
+    width: 309px;
+}
+#secondary {
+    clear: right;
+}
+#footer {
+    clear: both;
+    width: 100%;
+}
+
+/*
+LAYOUT: One column, no sidebar
+DESCRIPTION: One centered column with no sidebar
+*/
+.one-column #content {
+    margin: 0 auto;
+    width: 620px;
+}
+
+/*
+LAYOUT: Full width, no sidebar
+DESCRIPTION: Full width content with no sidebar; used for attachment pages
+*/
+.single-attachment #content {
+    margin: 0 auto;
+    width: 900px;
+}
+
+
+/* =Fonts -------------------------------------------------------------- */
+body,
+input,
+textarea,
+.page-title span,
+.pingback a.url {
+    font-family: Georgia, "Bitstream Charter", serif;
+}
+h3#comments-title,
+h3#reply-title,
+#access .menu,
+#access div.menu ul,
+#cancel-comment-reply-link,
+.form-allowed-tags,
+#site-info,
+#site-title,
+#wp-calendar,
+.comment-meta,
+.comment-body tr th,
+.comment-body thead th,
+.entry-content label,
+.entry-content tr th,
+.entry-content thead th,
+.entry-meta,
+.entry-title,
+.entry-utility,
+#respond label,
+.navigation,
+.page-title,
+.pingback p,
+.reply,
+.widget-title,
+.wp-caption-text {
+    font-family:  verdana, Helvetica, "Nimbus Sans L", sans-serif;
+}
+input[type=submit] {
+    font-family:  verdana, Helvetica, "Nimbus Sans L", sans-serif;
+}
+pre {
+    font-family: verdana;
+}
+code {
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+
+/* =Structure -------------------------------------------------------------- */
+
+/* The main theme structure */
+div.menu,
+#colophon,
+#branding,
+#main,
+#wrapper {
+    margin: 0 auto;
+    width: 960px;
+}
+#wrapper {
+    background: #fff;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+/* Structure the footer area */
+#footer-widget-area {
+    overflow: hidden;
+    padding: 10px;
+}
+#footer-widget-area .widget-area {
+    float: left;
+    margin-right: 20px;
+    width: 220px;
+}
+#footer-widget-area #fourth {
+    margin-right: 0;
+}
+#site-info {
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    width: 700px;
+}
+#site-generator {
+    float: right;
+    width: 220px;
+}
+
+
+/* =Global Elements -------------------------------------------------------------- */
+/* Main global 'theme' and typographic styles */
+body {
+    background: #fff;
+}
+body,
+input,
+textarea {
+    color: #666;
+    font-size: 12px;
+}
+hr {
+    background-color: #e7e7e7;
+    border: 0;
+    clear: both;
+    height: 1px;
+    margin-bottom: 18px;
+}
+
+/* Text elements */
+p {
+    font-size: 13px;
+}
+ul {
+    list-style: square;
+    margin: 0 0 18px 1.5em;
+}
+ol {
+    list-style: decimal;
+    margin: 0 0 18px 1.5em;
+}
+ol ol {
+    list-style: upper-alpha;
+}
+ol ol ol {
+    list-style: lower-roman;
+}
+ol ol ol ol {
+    list-style: lower-alpha;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    margin-bottom: 0;
+}
+dl {
+    margin: 0 0 24px 0;
+}
+dt {
+    font-weight: bold;
+}
+dd {
+    margin-bottom: 18px;
+}
+strong {
+    font-weight: bold;
+}
+cite,
+em,
+i {
+    font-style: italic;
+}
+big {
+    font-size: 131.25%;
+}
+ins {
+    background: #ffc;
+    text-decoration: none;
+}
+blockquote {
+    font-style: italic;
+    padding: 0 3em;
+}
+blockquote cite,
+blockquote em,
+blockquote i {
+    font-style: normal;
+}
+pre {
+    background: #1A5E80;
+    color: #222;
+    line-height: 18px;
+    margin-bottom: 18px;
+    padding: 1.5em;
+}
+abbr,
+acronym {
+    border-bottom: 1px dotted #666;
+    cursor: help;
+}
+sup,
+sub {
+    height: 0;
+    line-height: 1;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    bottom: 1ex;
+}
+sub {
+    top: .5ex;
+}
+
+a:link {
+    color: #1B6187;
+}
+a:visited {
+    color: #1B6187;
+}
+a:active,
+a:hover {
+    color: #1B6187;
+}
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+    position: absolute;
+    left: -9000px;
+}
+
+
+/* =Header -------------------------------------------------------------- */
+#site-title {
+    float: left;
+    font-size: 30px;
+    line-height: 36px;
+    margin: 0 0 18px 0;
+    width: 700px;
+}
+#site-title a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+#site-description {
+    clear: right;
+    float: right;
+    font-style: italic;
+    margin: 15px 0 18px 0;
+    width: 220px;
+}
+#branding img {
+    border-top: 4px solid #000;
+    border-bottom: 1px solid #000;
+    display: block;
+    float: left;
+}
+#header {
+    padding: 0px;
+    background-color: #fff;
+//    height: 155px;
+    height: 115px;
+    border: 0px solid black;
+}
+.logo_seo{
+    float:left;
+    padding-top: 5px;
+    padding-left: 120px;
+    border: 0px solid red;
+}
+.logo_seo a img{
+    width: 100px;
+}
+.buscador{
+    text-align: right;
+//    margin: 18px 0 25px 400px;
+    margin: -100px 0 25px 800px;
+    background: url(images/buscador.jpg) left no-repeat;
+//    width: 400px;
+    width: 190px;
+    height: 31px;
+    border: 0px solid red;
+}
+.input_buscador{
+    border: 0px;
+    background: transparent;
+    width: 149px;
+    height: 20px;
+    margin: 4px;
+}
+.submit_buscador{
+    border: 0px;
+    background: transparent;
+    padding: 3px 5px;
+    cursor: pointer;
+}
+
+/* =Menu -------------------------------------------------------------- */
+// PSD
+.menu_se0 {}
+.menu_seo {
+    float: right;
+    width: 100%;
+    border: 0px solid green;
+}
+#access {
+    display: block;
+    margin: 0 auto;
+    width: 980px;
+}
+// PSD
+#acceso .menu-header,div.menu {}
+#access .menu-header,
+div.menu {
+    background-color: #209BDE;
+    width: 100%;
+//    padding-left: 120px;
+}
+#access .menu-header ul,
+div.menu ul {
+    list-style: none;
+    margin: 0;
+}
+#access .menu-header li,
+div.menu li {
+    float: left;
+    position: relative;
+}
+// PSD
+#acceso a {}
+#access a {
+    background-color: #209BDE;
+    color: #fff;
+    font-size: 15px;
+    display: block;
+    padding: 10px 0 0 0;
+    text-decoration: none;
+    margin: 0 0 0 10px;
+    height: 26px;
+    font-weight: 100;
+    word-spacing: 0px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+#access a:hover {
+//	color: blue;
+}
+
+// PSD
+#acceso ul ul {}
+#access ul ul {
+    display: none;
+    position: absolute;
+    top: 36px;
+    left: 0;
+    width: 220px;
+    margin: 15px 0;
+    z-index: 99999;
+    background-color: #332B2A;
+    text-align: left;
+}
+#access ul ul li {
+    padding-left: 0px;
+}
+// PSD
+#acceso ul ul ul {}
+#access ul ul ul {
+    left: 100%;
+    top: 0;
+}
+// PSD
+#acceso ul ul a {}
+#access ul ul a {
+    background: #000;
+    line-height: 1em;
+    padding: 8px;
+    width: 320px;
+    height: auto;
+    color: #ccc;
+    font-size: 14px;
+    text-align: left;
+}
+#access ul ul a:hover {
+	font-weight: bold;
+}
+// PSD
+#access li:hover > a,
+#access ul ul :hover > a {
+    color: #fff;
+}
+#access ul li:hover > ul {
+    display: block;
+    text-align: right;
+}
+#access ul ul ul li:hover > a {
+    text-align: left;
+}
+#access ul li.current_page_item > a,
+#access ul li.current-menu-ancestor > a,
+#access ul li.current-menu-item > a,
+#access ul li.current-menu-parent > a {
+    color: #fff;
+}
+* html #access ul li.current_page_item a,
+* html #access ul li.current-menu-ancestor a,
+* html #access ul li.current-menu-item a,
+* html #access ul li.current-menu-parent a,
+* html #access ul li a:hover {
+    color: #f00;
+}
+
+
+/*Contenido*/
+// PSD
+.contenido{
+//    width: 980px;
+    width: 100%;
+    padding:0 10px;
+    margin: auto;
+}
+.contenido_header{
+//    margin: 0 10px;
+}
+
+.slide{
+    margin: 0px 15px;
+}
+/* =Content -------------------------------------------------------------- */
+
+#main {
+    clear: both;
+    /*    overflow: hidden;      */ /* Si no se viese bien hay que el comentario. */
+    padding: 15px 0 0 0;
+    background: url("images/fondo_body.jpg") repeat-x;
+    min-height: 600px;
+}
+#content {
+    margin-bottom: 36px;
+}
+#content,
+#content input,
+#content textarea {
+    color: #333;
+}
+#content p,
+#content ul,
+#content ol,
+#content dd,
+#content pre,
+#content hr {
+    /*    margin-bottom: 24px;*/
+}
+#content ul ul,
+#content ol ol,
+#content ul ol,
+#content ol ul {
+    margin-bottom: 0;
+}
+#content pre,
+#content kbd,
+#content tt,
+#content var {
+    font-size: 15px;
+    line-height: 21px;
+}
+#content code {
+    font-size: 13px;
+}
+#content dt,
+#content th {
+    color: #000;
+}
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6 {
+    color: #1B6187;
+    margin: 0px;
+}
+#content table {
+    margin: 0 -1px 10px 0;
+    text-align: left;
+    width: 100%;
+}
+#content tr th,
+#content thead th {
+    color: #888;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 18px;
+    padding: 9px 24px;
+}
+#content tr td {
+}
+#content tr.odd td {
+    background: #f2f7fc;
+}
+.hentry {
+    margin: 0 0 10px 0;
+}
+.home .sticky {
+    background: #f2f7fc;
+    border-top: 4px solid #000;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 18px 20px;
+}
+.single .hentry {
+    margin: 0 0 36px 0;
+}
+.page-title {
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 36px 0;
+}
+.page-title span {
+    color: #333;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: normal;
+}
+.page-title a:link,
+.page-title a:visited {
+    color: #888;
+    text-decoration: none;
+}
+.page-title a:active,
+.page-title a:hover {
+    color: #ff4b33;
+}
+#content .entry-title {
+    color: #3C6086;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1.3em;
+    margin-bottom: 0;
+}
+.entry-title a:link,
+.entry-title a:visited {
+    color: #000;
+    text-decoration: none;
+}
+.entry-title a:active,
+.entry-title a:hover {
+    color: #ff4b33;
+}
+.entry-meta {
+    color: #888;
+    font-size: 12px;
+}
+.entry-meta abbr,
+.entry-utility abbr {
+    border: none;
+}
+.entry-meta abbr:hover,
+.entry-utility abbr:hover {
+    border-bottom: 1px dotted #666;
+}
+.entry-content,
+.entry-summary {
+    clear: both;
+    padding: 12px 0 0 0;
+}
+#content .entry-summary p:last-child {
+    margin-bottom: 12px;
+}
+.entry-content fieldset {
+    border: 1px solid #e7e7e7;
+    margin: 0 0 24px 0;
+    padding: 24px;
+}
+.entry-content fieldset legend {
+    background: #fff;
+    color: #000;
+    font-weight: bold;
+    padding: 0 24px;
+}
+.entry-content input {
+    margin: 0 0 24px 0;
+}
+.entry-content input.file,
+.entry-content input.button {
+    margin-right: 24px;
+}
+.entry-content label {
+    color: #888;
+    font-size: 12px;
+}
+.entry-content select {
+    margin: 0 0 24px 0;
+}
+.entry-content sup,
+.entry-content sub {
+    font-size: 10px;
+}
+.entry-content blockquote.left {
+    float: left;
+    margin-left: 0;
+    margin-right: 24px;
+    text-align: right;
+    width: 33%;
+}
+.entry-content blockquote.right {
+    float: right;
+    margin-left: 24px;
+    margin-right: 0;
+    text-align: left;
+    width: 33%;
+}
+.entry-content p frame{
+    border:1px solid red;
+}
+.page-link {
+    clear: both;
+    color: #000;
+    font-weight: bold;
+    margin: 0 0 22px 0;
+    word-spacing: 0.5em;
+}
+.page-link a:link,
+.page-link a:visited {
+    background: #f1f1f1;
+    color: #333;
+    font-weight: normal;
+    padding: 0.5em 0.75em;
+    text-decoration: none;
+}
+.home .sticky .page-link a {
+    background: #d9e8f7;
+}
+.page-link a:active,
+.page-link a:hover {
+    color: #ff4b33;
+}
+body.page .edit-link {
+    clear: both;
+    display: block;
+}
+#entry-author-info {
+    background: #f2f7fc;
+    border-top: 4px solid #000;
+    clear: both;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 24px 0;
+    overflow: hidden;
+    padding: 18px 20px;
+}
+#entry-author-info #author-avatar {
+    background: #fff;
+    border: 1px solid #e7e7e7;
+    float: left;
+    height: 60px;
+    margin: 0 -104px 0 0;
+    padding: 11px;
+}
+#entry-author-info #author-description {
+    float: left;
+    margin: 0 0 0 104px;
+}
+#entry-author-info h2 {
+    color: #000;
+    font-size: 100%;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.entry-utility {
+    clear: both;
+    color: #888;
+    font-size: 12px;
+    line-height: 18px;
+}
+.entry-meta a,
+.entry-utility a {
+    color: #888;
+}
+.entry-meta a:hover,
+.entry-utility a:hover {
+    color: #ff4b33;
+}
+#content .video-player {
+    padding: 0;
+}
+
+
+/* =Asides -------------------------------------------------------------- */
+
+.home #content .format-aside p,
+.home #content .category-asides p {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+.home .hentry.format-aside,
+.home .hentry.category-asides {
+    padding: 0;
+}
+.home #content .format-aside .entry-content,
+.home #content .category-asides .entry-content {
+    padding-top: 0;
+}
+
+
+/* =Gallery listing -------------------------------------------------------------- */
+.format-gallery .size-thumbnail img,
+.category-gallery .size-thumbnail img {
+    border: 10px solid #f1f1f1;
+    margin-bottom: 0;
+}
+.format-gallery .gallery-thumb,
+.category-gallery .gallery-thumb {
+    float: left;
+    margin-right: 20px;
+    margin-top: -4px;
+}
+.home #content .format-gallery .entry-utility,
+.home #content .category-gallery .entry-utility {
+    padding-top: 4px;
+}
+
+
+/* =Attachment pages -------------------------------------------------------------- */
+.attachment .entry-content .entry-caption {
+    font-size: 140%;
+    margin-top: 24px;
+}
+.attachment .entry-content .nav-previous a:before {
+    content: '\2190\00a0';
+}
+.attachment .entry-content .nav-next a:after {
+    content: '\00a0\2192';
+}
+
+
+/* =Images -------------------------------------------------------------- */
+/*
+Resize images to fit the main content area.
+- Applies only to images uploaded via WordPress by targeting size-* classes.
+- Other images will be left alone. Use "size-auto" class to apply to other images.
+*/
+img.size-auto,
+img.size-full,
+img.size-large,
+img.size-medium,
+.attachment img {
+    max-width: 100%; /* When images are too wide for containing element, force them to fit. */
+    height: auto; /* Override height to match resized width for correct aspect ratio. */
+}
+.alignleft,
+img.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 24px;
+    margin-top: 4px;
+}
+.alignright,
+img.alignright {
+    display: inline;
+    float: right;
+    margin-left: 24px;
+    margin-top: 4px;
+}
+.aligncenter,
+img.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+img.alignleft,
+img.alignright,
+img.aligncenter {
+    margin-bottom: 12px;
+}
+.wp-caption {
+    background: #f1f1f1;
+    line-height: 18px;
+    margin-bottom: 20px;
+    max-width: 632px !important; /* prevent too-wide images from breaking layout */
+    padding: 4px;
+    text-align: center;
+}
+.wp-caption img {
+    margin: 5px 5px 0;
+}
+.wp-caption p.wp-caption-text {
+    color: #888;
+    font-size: 12px;
+    margin: 5px;
+}
+.wp-smiley {
+    margin: 0;
+}
+.gallery {
+    margin: 0 auto 18px;
+}
+.gallery .gallery-item {
+    float: left;
+    margin-top: 0;
+    text-align: center;
+    width: 33%;
+}
+.gallery-columns-2 .gallery-item {
+    width: 50%;
+}
+.gallery-columns-4 .gallery-item {
+    width: 25%;
+}
+.gallery img {
+    border: 2px solid #cfcfcf;
+}
+.gallery-columns-2 .attachment-medium {
+    max-width: 92%;
+    height: auto;
+}
+.gallery-columns-4 .attachment-thumbnail {
+    max-width: 84%;
+    height: auto;
+}
+.gallery .gallery-caption {
+    color: #888;
+    font-size: 12px;
+    margin: 0 0 12px;
+}
+.gallery dl {
+    margin: 0;
+}
+.gallery img {
+    border: 10px solid #f1f1f1;
+}
+.gallery br+br {
+    display: none;
+}
+#content .attachment img {/* single attachment images should be centered */
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* =Navigation -------------------------------------------------------------- */
+
+.navigation {
+    color: #888;
+    font-size: 12px;
+    line-height: 18px;
+    overflow: hidden;
+}
+.navigation a:link,
+.navigation a:visited {
+    color: #888;
+    text-decoration: none;
+}
+.navigation a:active,
+.navigation a:hover {
+    color: #ff4b33;
+}
+.nav-previous {
+    float: left;
+    width: 50%;
+}
+.nav-next {
+    float: right;
+    text-align: right;
+    width: 50%;
+}
+#nav-above {
+    margin: 0 0 18px 0;
+}
+#nav-above {
+    display: none;
+}
+.paged #nav-above,
+.single #nav-above {
+    display: block;
+}
+#nav-below {
+    margin: -18px 0 0 0;
+}
+
+
+/* =Comments -------------------------------------------------------------- */
+#comments {
+    clear: both;
+}
+#comments .navigation {
+    padding: 0 0 18px 0;
+}
+h3#comments-title,
+h3#reply-title {
+    color: #3C6086;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+h3#comments-title {
+    padding: 24px 0;
+}
+.commentlist {
+    list-style: none;
+    margin: 0;
+}
+.commentlist li.comment {
+    border-bottom: 1px solid #e7e7e7;
+    line-height: 24px;
+    margin: 0 0 24px 0;
+    padding: 0 0 0 56px;
+    position: relative;
+}
+.commentlist li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+#comments .comment-body ul,
+#comments .comment-body ol {
+    margin-bottom: 18px;
+}
+#comments .comment-body p:last-child {
+    margin-bottom: 6px;
+}
+#comments .comment-body blockquote p:last-child {
+    margin-bottom: 24px;
+}
+.commentlist ol {
+    list-style: decimal;
+}
+.commentlist .avatar {
+    position: absolute;
+    top: 4px;
+    left: 0;
+}
+.comment-author {
+}
+.comment-author cite {
+    color: #000;
+    font-style: normal;
+    font-weight: bold;
+}
+.comment-author .says {
+    font-style: italic;
+}
+.comment-meta {
+    font-size: 12px;
+    margin: 0 0 18px 0;
+}
+.comment-meta a:link,
+.comment-meta a:visited {
+    color: #888;
+    text-decoration: none;
+}
+.comment-meta a:active,
+.comment-meta a:hover {
+    color: #ff4b33;
+}
+.commentlist .even {
+}
+.commentlist .bypostauthor {
+}
+.reply {
+    font-size: 12px;
+    padding: 0 0 24px 0;
+}
+.reply a,
+a.comment-edit-link {
+    color: #888;
+}
+.reply a:hover,
+a.comment-edit-link:hover {
+    color: #ff4b33;
+}
+.commentlist .children {
+    list-style: none;
+    margin: 0;
+}
+.commentlist .children li {
+    border: none;
+    margin: 0;
+}
+.nopassword,
+.nocomments {
+    display: none;
+}
+#comments .pingback {
+    border-bottom: 1px solid #e7e7e7;
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+}
+.commentlist li.comment+li.pingback {
+    margin-top: -6px;
+}
+#comments .pingback p {
+    color: #888;
+    display: block;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+}
+#comments .pingback .url {
+    font-size: 13px;
+    font-style: italic;
+}
+
+/* Comments form */
+input[type=submit] {
+    color: #333;
+}
+#respond {
+    border-top: 1px solid #e7e7e7;
+    margin: 24px 0;
+    overflow: hidden;
+    position: relative;
+}
+#respond p {
+    margin: 0;
+}
+#respond .comment-notes {
+    margin-bottom: 1em;
+}
+.form-allowed-tags {
+    line-height: 1em;
+}
+.children #respond {
+    margin: 0 48px 0 0;
+}
+h3#reply-title {
+    margin: 18px 0;
+}
+#comments-list #respond {
+    margin: 0 0 18px 0;
+}
+#comments-list ul #respond {
+    margin: 0;
+}
+#cancel-comment-reply-link {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 18px;
+}
+#respond .required {
+    color: #ff4b33;
+    font-weight: bold;
+}
+#respond label {
+    color: #888;
+    font-size: 12px;
+}
+#respond input {
+    margin: 0 0 9px;
+    width: 98%;
+}
+#respond textarea {
+    width: 98%;
+}
+#respond .form-allowed-tags {
+    color: #888;
+    font-size: 12px;
+    line-height: 18px;
+}
+#respond .form-allowed-tags code {
+    font-size: 11px;
+}
+#respond .form-submit {
+    margin: 12px 0;
+}
+#respond .form-submit input {
+    font-size: 14px;
+    width: auto;
+}
+
+
+/* =Widget Areas -------------------------------------------------------------- */
+.widget-area ul {
+    color: #fff;
+    list-style-image: url("images/ul_menu_footer.png");
+}
+.widget-area ul ul {
+    list-style: outside;
+    margin: 0px;
+}
+.widget-area select {
+    max-width: 100%;
+}
+.widget_search #s {/* This keeps the search inputs in line */
+    width: 70%;
+}
+.widget_search label {
+    display: none;
+}
+.widget-container {
+    margin: 0 0 18px 0;
+    list-style: none;
+}
+.widget-title {
+    color: #222;
+    font-weight: bold;
+}
+.widget-area a:link,
+.widget-area a:visited {
+    text-decoration: none;
+}
+.widget-area a:active,
+.widget-area a:hover {
+    text-decoration: underline;
+}
+.widget-area .entry-meta {
+    font-size: 11px;
+}
+#wp_tag_cloud div {
+    line-height: 1.6em;
+}
+#wp-calendar {
+    width: 100%;
+}
+#wp-calendar caption {
+    color: #222;
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 4px;
+    text-align: left;
+}
+#wp-calendar thead {
+    font-size: 11px;
+}
+#wp-calendar thead th {
+}
+#wp-calendar tbody {
+    color: #aaa;
+}
+#wp-calendar tbody td {
+    background: #f5f5f5;
+    border: 1px solid #fff;
+    padding: 3px 0 2px;
+    text-align: center;
+}
+#wp-calendar tbody .pad {
+    background: none;
+}
+#wp-calendar tfoot #next {
+    text-align: right;
+}
+.widget_rss a.rsswidget {
+    color: #000;
+}
+.widget_rss a.rsswidget:hover {
+    color: #ff4b33;
+}
+.widget_rss .widget-title img {
+    width: 11px;
+    height: 11px;
+}
+
+/* Main sidebars */
+#main .widget-area ul {
+    margin-left: 0;
+    padding: 0;
+}
+#main .widget-area ul ul {
+    border: none;
+    margin-left: 1.3em;
+    padding: 0;
+    color:#999;
+}
+.wp-polls{
+    color:#666;
+}
+#primary {
+}
+#secondary {
+}
+
+/* Footer widget areas */
+#footer-widget-area {
+}
+
+
+/* =Footer -------------------------------------------------------------- */
+#footer{
+    background: url(images/fondo_footer.jpg) repeat-x;
+}
+#footer_seo{
+    height: 138px;
+    background: url(images/fondo_footer_header.jpg) center  no-repeat;
+
+}
+#footer_seo img {
+	margin: auto;
+}
+.footer_menu{
+    background: url("images/fondo_footer.png");
+}
+#footer {
+}
+#colophon {
+    overflow: hidden;
+    padding: 18px 0;
+    background: url("images/fondo_footer_pluma.jpg") center no-repeat;
+    min-height: 227px;
+}
+.logos_menu{
+    overflow: hidden;
+}
+.menu_logos{
+    float: right;
+    width: 40%;
+    text-align: right;
+    color:#fff;
+    margin-top: 40px;
+    font-family: verdana;
+    font-size: 14px;
+}
+.menu_logos a{
+    color:#fff;
+    text-decoration: none;
+}
+.menu_logos img{
+    padding-top:4px;
+}
+.logos{
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+.logos img{
+    margin-right: 55px;
+}
+.footer_menu_widget li h3{
+    color:#fff;
+    font-weight: 100;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+.footer_menu_widget li  {
+    font-weight: 100;
+    font-family:  verdana, Helvetica, "Nimbus Sans L", sans-serif;
+    width: 100%;
+    font-size: 13px;
+    padding: 5px 0;
+    letter-spacing: 1px;
+}
+.footer_menu_widget li a {
+    color:#fff;
+    padding-bottom: 5px;
+}
+
+#site-info {
+    font-weight: bold;
+}
+#site-info a {
+    color: #000;
+    text-decoration: none;
+}
+#site-generator {
+    font-style: italic;
+    position: relative;
+}
+#site-generator a {
+    background: url(images/wordpress.png) center left no-repeat;
+    color: #666;
+    display: inline-block;
+    line-height: 16px;
+    padding-left: 20px;
+    text-decoration: none;
+}
+#site-generator a:hover {
+    text-decoration: underline;
+}
+img#wpstats {
+    display: block;
+    margin: 0 auto 10px;
+}
+
+
+/* =Mobile Safari ( iPad, iPhone and iPod Touch ) -------------------------------------------------------------- */
+pre {
+    -webkit-text-size-adjust: 140%;
+}
+code {
+    -webkit-text-size-adjust: 160%;
+}
+#access0,
+.entry-meta,
+.entry-utility,
+.navigation,
+.widget-area {
+    -webkit-text-size-adjust: 120%;
+}
+#site-description {
+    -webkit-text-size-adjust: none;
+}
+
+
+/* =Print Style -------------------------------------------------------------- */
+@media print {
+    body {
+        background: none !important;
+    }
+    #wrapper {
+        clear: both !important;
+        display: block !important;
+        float: none !important;
+        position: relative !important;
+    }
+    #header {
+        border-bottom: 2pt solid #000;
+        padding-bottom: 18pt;
+    }
+    #colophon {
+        border-top: 2pt solid #000;
+    }
+    #site-title,
+    #site-description {
+        float: none;
+        line-height: 1.4em;
+        margin: 0;
+        padding: 0;
+    }
+    #site-title {
+        font-size: 13pt;
+    }
+    .entry-content {
+        font-size: 14pt;
+        line-height: 1.6em;
+    }
+    .entry-title {
+        font-size: 21pt;
+    }
+    #access,
+    #branding img,
+    #respond,
+    .comment-edit-link,
+    .edit-link,
+    .navigation,
+    .page-link,
+    .widget-area {
+        display: none !important;
+    }
+    #container,
+    #header,
+    #footer {
+        margin: 0;
+        width: 100%;
+    }
+    #content,
+    .one-column #content {
+        margin: 24pt 0 0;
+        width: 100%;
+    }
+    .wp-caption p {
+        font-size: 11pt;
+    }
+    #site-info,
+    #site-generator {
+        float: none;
+        width: auto;
+    }
+    #colophon {
+        width: auto;
+    }
+    img#wpstats {
+        display: none;
+    }
+    #site-generator a {
+        margin: 0;
+        padding: 0;
+    }
+    #entry-author-info {
+        border: 1px solid #e7e7e7;
+    }
+    #main {
+        display: inline;
+    }
+    .home .sticky {
+        border: none;
+    }
+}
+
+
+/* SEO */
+/* INDEX SEO */
+#noticias-agenda, #menu_paginas{
+    background: url("images/fondo_agenda.jpg") repeat-x #fff;
+    width: 100%;
+    min-height: 200px;
+    overflow: hidden;
+}
+.noticias-agenda{
+    overflow: hidden;
+}
+#noticias-agenda .posts-inicio .post{
+    padding:15px 10px;
+}
+.index_noticia{
+    width: 290px;
+    float: left;
+    padding:10px;
+    margin-bottom: 25px;
+    font-family: verdana;
+}
+.index_noticia img{
+    text-align: center;
+    border: 1px solid #eee;
+    padding:8px;
+    background-color: #fff;
+    margin: 10px 0px;
+    -moz-box-shadow: 1px 0px 5px #999; /* Destinado a Mozilla Firefox */
+    -webkit-box-shadow: 1px 0px 5px #999; /* Safari y Chrome antes de la versión 10 */
+    box-shadow: 1px 0px 5px #999; /* Opera 10.5, IE9, Chrome a partir de la versión 10 */
+}
+.index_noticia h2 a{
+    font-size: 14px;
+    color: #3c6086;
+    text-decoration: none;
+    padding-bottom: 7px;
+}
+.index_noticia p{
+    color:#777;
+    padding: 5px 0px 0px 0px;
+}
+.posts-inicio{
+    border-top:2px dashed #eee;
+}
+.posts-inicio .post{
+    border-bottom:2px dashed #eee;
+}
+.posts-blog{
+	width: 95%;
+	margin: 5px;
+	padding: 10px;
+	border: 1px solid #EEEEEE;
+ 	box-shadow: 1px 1px 5px #999999;
+	background-color: #E5E5E9;
+-moz-box-shadow: 1px 1px 5px #999999;
+-webkit-box-shadow: 1px 1px 5px #999999;
+}
+
+/* FIN INDEX SEO */
+
+.menu-inferior{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    padding-top: 5px;
+}
+.menu-inferior ul{
+    height: 20px;
+    margin:0px;
+    list-style: none;
+}
+.menu-inferior ul ul{
+    visibility: hidden;
+    display: none;
+}
+.menu-inferior ul li{
+    margin-top:15px;
+    float: left;
+    padding-bottom: 7px;
+    padding-top: 3px;
+}
+.menu-inferior ul li a{
+    /*    height: 26px;*/
+    color:#fff;
+    padding: 10px 13px;
+    font-family: verdana;
+    font-size: 12px;
+    text-decoration: none;
+    background-color: #477cad;
+    border-left: 1px solid #354e6e;
+}
+.menu-inferior ul li a:hover{
+    text-decoration: underline overline;
+}
+.sombra{
+    -moz-box-shadow: inset 2px 0px 5px #354e6e;
+    -webkit-box-shadow: inset 2px 0px 5px #354e6e;
+    box-shadow: inset 2px 0px 5px #354e6e;
+}
+#menu-secundario{
+    margin-top: -14px;
+    padding-top:27px;
+
+}
+#menu-secundario a{
+    background-color: #f1f2f2;
+    color: #555;
+    padding: 15px 20px 15px 20px;
+    border: 0px;
+    margin-top:10px;
+    -moz-box-shadow:  1px 0px 5px #666;
+    -webkit-box-shadow:  1px 0px 5px #666;
+    box-shadow:  1px 0px 5px #666;
+}
+#menu-cuaderno{
+    margin: 20px 15px;
+    width: 570px;
+    border: 1px solid #eee;
+    padding: 15px 0 15px 10px;
+    font-family: verdana;
+    background: #fff;
+    box-shadow: -2px 2px 3px #eee;
+    -webkit-box-shadow: -2px 2px 3px #eee;
+    -moz-box-shadow: -2px 2px 3px #eee;
+}
+#menu-cuaderno a{
+    margin-right: 33px;
+    text-decoration: none;
+    color:#666;
+}
+#menu-cuaderno a:hover{
+    color:#1B6187;
+}
+#menu-cuaderno .activo{
+    color:#1B6187;
+    font-weight:bold;
+}
+
+.posts{
+    overflow: hidden;
+}
+.post{
+    font-family: verdana;
+    overflow: hidden;
+}
+.post_imagen{
+    border: 1px solid red;
+    float: left;
+    background: white;
+    padding: 2px;
+    border: 1px solid #ccc;
+    margin: 0px 20px 0px 0px;
+}
+.post_titulo{
+    color: #1B6187;
+    margin: 0px;
+    padding: 0px;
+}
+.post_titulo a{
+    color:  #1B6187;
+    text-decoration: none;
+    font-size: 21px;
+}
+.post_fecha{
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+}
+.post_fecha a{
+    color: #1B6187;
+}
+.post p{
+    font-size: 13px;
+    color:#777;
+    line-height: 16px;
+    margin-top: 8px;
+}
+.post p a{
+    color: #4E92B7;
+}
+
+.paginador{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.redes_sociales{
+    margin: 10px 0px 15px 0px;
+    text-align: center;
+}
+.redes_sociales a{
+    padding: 0 5px;
+
+}
+.widget-bloque{
+    overflow: hidden;
+    margin: 10px 0;
+}
+.widget-bloque .widget-header{
+    width: 309px;
+    height: 20px;
+    background:url("images/widget-header.png") no-repeat;
+}
+.widget-bloque .widget-footer{
+    background:url("images/widget-footer.png") no-repeat;
+    width: 309px;
+    height: 24px;
+
+}
+.widget-bloque .widget-body{
+    background:url("images/widget-body.png") repeat-y;
+    width: 264px;
+    overflow: hidden;
+    padding-left: 25px;
+    padding-right: 20px;
+    font-family: verdana;
+}
+.widget-bloque .widget-title{
+    color: #3c6086;
+    margin:2px 0 8px 0;
+    padding-top: 2px;
+}
+.widget-bloque .widget-title img{
+    float:left;
+    margin-top: -2px;
+}
+.unacolumna{
+    font-family: verdana;
+    margin: 0 15px;
+}
+.titulo_pagina{
+    text-align: right;
+    overflow: hidden;
+}
+.titulo_pagina h1, .titulo_pagina h2{
+    -moz-border-radius: 10px 10px 0px 0px;
+    -webkit-border-radius: 10px 10px 0px 0px;
+    -ms-border-radius: 10px 10px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
+    text-transform: uppercase;
+    color: #3c6086;
+    background-color: #f1f1f1;
+    float: right;
+    padding: 15px 25px 15px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: verdana;
+    text-shadow: #777 1px 1px 3px;
+}
+.titulo_pagina h3{
+    -moz-border-radius: 10px 10px 0px 0px;
+    -webkit-border-radius: 10px 10px 0px 0px;
+    -ms-border-radius: 10px 10px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
+    text-transform: uppercase;
+    color: #3c6086;
+    background-color: #f1f1f1;
+    float: right;
+    padding: 10px 20px 10px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: verdana;
+    text-shadow: #777 1px 1px 3px;
+}
+.contenido_pagina{
+    background: url("images/fondo_una_columna.jpg") repeat-x #fff;
+    padding: 15px;
+    overflow: hidden;
+    font-family: verdana;
+    min-height: 800px;
+}
+.contenido_pagina_agenda{
+    background: url("images/fondo_una_columna.jpg") repeat-x #fff;
+    overflow: hidden;
+    font-family: verdana;
+    min-height: 800px;
+}
+.contenido_pagina p{
+    line-height: 18px;
+}
+.contenido_pagina ul{
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 0px;
+}
+.contenido_pagina ul li{
+    margin: 6px;
+}
+
+.secciones{
+    overflow: hidden;
+    margin:20px 0;
+}
+.titulo_secciones{
+    height: 60px;
+    background: url("images/titulo_secciones.jpg") repeat-x;
+    padding: 5px 0 0 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 100;
+}
+.seccion{
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.seccion h4{
+    color: #3c6086;
+    font-size: 16px;
+}
+.seccion p{
+    margin: 3px 2px;
+    color: #888;
+}
+.seccion img{
+    float:left;
+    margin: 0 15px 5px 0;
+    border: 1px solid #ccc;
+    padding: 1px;
+}
+.seccion a{
+    color: #3c6086;
+}
+.select_donde_estamos{
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    color: #888;
+    width: 95%;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+.select_donde_estamos option{
+    background-color: #fff;
+    margin: 5px 5px;
+}
+.noticias{
+    font-family: verdana;
+    overflow: hidden;
+}
+.noticias a , .noticias h3{
+    color:#777;
+}
+.noticia{
+    margin:10px 0px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    border-bottom: 1px #ccc dashed;
+}
+.noticia a{
+    color:#777;
+    font-size: 13px;
+}
+.noticia a:hover{
+    color:#444;
+    text-decoration: none;
+}
+.noticia img{
+    float: left;
+    border: 1px solid #eee;
+    padding: 2px;
+    margin-right: 5px;
+
+}
+.leer_mas_noticias{
+    float: right;
+    font-size: 14px;
+}
+
+/*Lighbox*/
+.fadebox {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 180%;
+    background-color: black;
+    z-index:1001;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=80);
+}
+.overbox {
+    display: none;
+    position: absolute;
+    top: 2%;
+    left: 25%;
+    width: 730px;
+    height: 730px;
+    z-index:1002;
+    overflow: hidden;
+    background-color:white;
+
+}
+.cerrar{
+    float: right;
+    z-index:1020;
+    position: absolute;
+    left: 685px;
+    top:7px;
+    color:#3c6086;
+    text-decoration: none;
+    font-family: verdana;
+    font-weight: bold;
+}
+/*Lighbox*/
+/*MAPA*/
+#cataluna, #aragon,#pais_vasco,#cantabria,#extremadura,#andalucia,#canarias,#valencia,#madrid,#navarra,#la-rioja,#baleares,#ceuta,#melilla,#galicia,#asturias,#murcia,#castilla-la-mancha,#castilla-leon {
+    position: absolute;
+    cursor: pointer;
+    z-index: 10;
+}
+#cataluna{
+    margin-left: 375px;
+    margin-top:50px;
+}
+#aragon{
+    margin-left: 308px;
+    margin-top:47px;
+}
+#pais_vasco{
+    margin-left: 271px;
+    margin-top:27px;
+}
+#cantabria{
+    margin-left: 232px;
+    margin-top:25px;
+}
+#extremadura{
+    margin-left: 155px;
+    margin-top:142px;
+}
+#andalucia{
+    margin-left: 155px;
+    margin-top:206px;
+}
+#canarias{
+    margin-left: 331px;
+    margin-top:306px;
+}
+#valencia{
+    margin-left: 326px;
+    margin-top:131px;
+}
+#madrid{
+    margin-left: 240px;
+    margin-top:115px;
+}
+#navarra{
+    margin-left: 301px;
+    margin-top:32px;
+}
+#la-rioja{
+    margin-left: 281px;
+    margin-top:58px;
+}
+#baleares{
+    margin-left: 402px;
+    margin-top:155px;
+}
+#ceuta{
+    margin-left: 195px;
+    margin-top:310px;
+}
+#melilla{
+    margin-left: 262px;
+    margin-top:328px;
+}
+#galicia{
+    margin-left: 106px;
+    margin-top:15px;
+}
+#asturias{
+    margin-left: 166px;
+    margin-top:18px;
+}
+#murcia{
+    margin-left: 304px;
+    margin-top:205px;
+}
+#castilla-la-mancha{
+    margin-left: 216px;
+    margin-top:110px;
+}
+#castilla-leon{
+    margin-left: 170px;
+    margin-top:36px;
+}
+
+
+/*MAPA*/
+
+.entry-content ul li, .entry-content ol li{
+    line-height: 16px;
+    padding-bottom: 5px;
+}
+.entry-content a {
+    color:#1A6187;
+    text-decoration: none;
+}
+.entry-content a:hover{
+    text-decoration: underline;
+}
+/*Enlaces*/
+#archivos{
+    margin:10px 20px;
+    font-family: verdana;
+}
+.enlaces{
+    margin-top: 10px;
+}
+.enlace{
+    background-color: #edeeef;
+    margin: 5px 0px 7px ;
+    padding:7px 15px;
+    overflow: hidden;
+}
+.enlace .enlace-titulo img {
+    float: left;
+    margin:0px 15px 0px 0px;
+}
+.enlace .enlace-titulo{
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+    color:#666;
+}
+.enlace .enlace-descripcion a{
+    color:#1A6187;
+}
+.enlace .enlace-descripcion{
+    color:#888;
+}
+.enlace .enlace-titulo a{
+    color:#666;
+    text-decoration: none;
+}
+.descripcion-cat{
+    font-family: verdana;
+    margin:20px 0px 25px 0px;
+    font-size: 13px;
+    line-height: 14px;
+    color:#666;
+}
+/*Enlaces*/
+.cuaderno_campo{
+    padding: 15px;
+    overflow: hidden;
+    font-family: verdana;
+    min-height: 700px;
+    line-height:17px;
+}
+
+/*Agenda*/
+#agenda-cont{
+    overflow: hidden;
+    font-family: verdana;
+}
+#agenda-cont #cat-cal{
+    overflow: hidden;
+}
+#agenda-cont #cat-cal #cat{
+    width: 240px;
+    float: left;
+    margin:20px 5px 5px 10px;
+    padding: 15px;
+}
+#agenda-cont #cat-cal #cal{
+    width: 280px;
+    float: right;
+    margin:20px 10px 5px 5px;
+    padding: 15px 15px 6px 15px;
+    min-height: 175px;
+}
+#agenda-cont #cat-cal #cat, #agenda-cont #cat-cal #cal{
+    border: 1px solid #f2f3f3;
+    background-color: #fff;
+    box-shadow: -2px 2px 3px #ccc;
+    -webkit-box-shadow: -2px 2px 3px #ccc;
+    -moz-box-shadow: -2px 2px 3px #ccc;
+
+}
+#agenda-cont #cat-cal #cat .agen-cat{
+    margin:10px 0px 0px 0px;
+}
+#agenda-cont #cat-cal #cat .titulo_cat{
+    font-weight: 800;
+    color:#555;
+
+}
+#agenda-cont #cat-cal #cat .agen-cat a{
+    display: block;
+    margin: 4px 0px;
+    color:#666;
+    text-decoration: none;
+}
+#agenda-cont #cat-cal #cat .agen-cat a:hover{
+    color:#333;
+}
+.cuadrado{
+    width: 12px;
+    height: 12px;
+    float: left;
+    margin-right: 10px;
+}
+.tablacalendario{
+    margin-top: 10px;
+}
+
+.diavalido , .diasemana{
+    padding:3px;
+    text-align: center;
+}
+.diasemana{
+    color: #5e5f61;
+}
+.diavalido{
+    color: #b6b8bb;
+}
+#mesyano{
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom:10px;
+    border-bottom: 1px solid #eee;
+}
+#cargando, #cargando-peque, #cargando_turismo{
+    width: 560px;
+    height: 800px;
+    position: absolute;
+    background-color: #fff;
+    text-align: center;
+    padding: 30px;
+    color:#1B6187;
+    font-family: verdana;
+    display: none;
+}
+#cargando-peque{
+    margin-left: -15px;
+}
+#cargando_turismo{
+    width: 850px;
+}
+.cuerpo_noticia_agenda h2{
+    color: #3C6086;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1.3em;
+    margin-bottom: 0;
+}
+.descripcion_noticia_agenda{
+    color: #777777;
+    font-size: 13px;
+    line-height: 16px;
+    margin-top: 8px;}
+/* Agenda */
+.bloque_not{
+    overflow: hidden;
+    margin: 15px 10px 10px 10px;
+    height: 750px;
+
+}
+.caja_noticia{
+    width: 295px;
+    height: 90px;
+    float: left;
+    margin-top: 15px;
+    border-bottom: 2px dashed #efefef;
+}
+.titulo_noticia{
+    font-size: 15px;
+    color:#1B6187;
+    font-weight: bold;
+}
+.cuadrado2{
+    width: 27px;
+    height: 11px;
+    padding: 3px;
+    color:#fff;
+    font-weight: bold;
+    margin: 0px 3px 3px 0px;
+    float: left;
+}
+.catego{
+    overflow: hidden;
+}
+.post_des{
+    margin-top: 8px;
+    color: #666;
+}
+.post_des a{
+    color: #666;
+}
+#paginador{
+    text-align: center;
+    height: 30px;
+}
+#paginador .pagina{
+    padding: 3px 8px;
+    text-decoration: none;
+    background-color: #f1f1f1;
+    color:#a8abad;
+    margin: -2px;
+    border: 1px solid #dadbdd;
+    background:-webkit-gradient(linear,left top,left bottom,from(#FAFAFA),to(#eaeaea));
+    background:-moz-linear-gradient(left top,left bottom,from(#FAFAFA),to(#eaeaea));
+    box-shadow: 0px 1px 2px #ccc;
+    -webkit-box-shadow: 0px 1px 2px #ccc;
+    -moz-box-shadow: 0px 1px 2px #ccc;
+    display: block;
+    float: left;
+    margin: 4px 0;
+}
+#paginador .pagina_activa{
+    padding: 3px 8px;
+    text-decoration: none;
+    background-color: red;
+    color:#a8abad;
+    margin: -2px;
+    border: 1px solid #dadbdd;
+    background:-webkit-gradient(linear,left top,left bottom,from(#FAFAFA),to(#eaeaea));
+    background:-moz-linear-gradient(left top,left bottom,from(#FAFAFA),to(#eaeaea));
+    box-shadow: 0px 1px 2px #ccc;
+    -webkit-box-shadow: 0px 1px 2px #ccc;
+    -moz-box-shadow: 0px 1px 2px #ccc;
+}
+#atras_noticia{
+    color:#999;
+    text-decoration: none;
+    padding: 5px 0px;
+    margin: 5px 0px;
+}
+#pagina_activa{
+    font-weight: bold;
+}
+.letra_abecedario{
+    display: block;
+    float: left;
+    padding: 3px 5px;
+    text-decoration: none;
+    margin:0px 2px;
+}
+.letras{
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+#orden_alfabetico,#orden_sistematico{
+    position: absolute;
+}
+.menu_aves_espana{
+    overflow: hidden;
+    height: 85px;
+    border-bottom: 2px dashed #ccc;
+    margin-bottom: 15px;
+
+}
+#titulo_aves{
+    padding-bottom: 10px;
+}
+.aves_tabla{
+    display: block;
+    padding:1px 0px;
+}
+
+#menu_categorias{
+    padding: 0px;
+    margin:0px;
+    list-style: disc;
+    margin-left: 15px;
+    color:#1A5E80;
+    padding-left: 15px;
+    margin-bottom: 8px;
+}
+#menu_categorias li{
+    padding: 2px 0px;
+}
+#menu_categorias li a{
+    text-decoration: none;
+}
+#menu_categorias li a:hover{
+    text-decoration:underline;
+}
+#container .bloque_menu_categorias{
+    float: right;
+    margin: -5px 10px -3px 0px;
+}
+#content .contenido_pagina .posts .post{
+    margin: 0px 0px 10px 0px;
+    padding: 0px 0px 10px 0px;
+    border-bottom: 2px dashed #efefef;
+}
+.imagen_evento{
+    width: 260px;
+    height: 160px;
+}
+#menu_paginas{
+    margin-left:-15px;
+    width:620px;
+}
+.ver_todos_eventos{
+    font-size: 14px;
+    font-family: verdana
+}
+.post_turismo{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px dashed #ccc;
+}
+.nombre_cat_turismo{
+    margin: 20px 0px 10px 0px;
+}
+.mapa_turismo{
+    float: left;
+    width: 591px;
+}
+.categorias_turismo{
+    float: right;
+    width: 34%;
+}
+.categorias_turismo img{
+    width: 92%;
+}
+#mapa_y_categorias{
+    overflow: hidden;
+    margin-top: 15px;
+}
+.categorias_turismo ul li{
+    margin:0px;
+    padding:0px;
+}
+#contenedor_turismo{
+    border-top: 1px solid #ccc;
+    margin-top: -5px;
+    background: #fff;
+}
+.menu-item-type-taxonomy{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+#menu-turismo-ornitologico li{
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+
+img.alignleft,
+img.alignright,
+img.aligncenter {
+	margin-bottom: 12px;
+}
+.wp-caption {
+	background: #f1f1f1;
+	border: none;
+	-khtml-border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	color: #888;
+	font-size: 12px;
+	line-height: 18px;
+	margin-bottom: 20px;
+	max-width: 632px !important; /* prevent too-wide images from breaking layout */
+	padding: 4px;
+	text-align: center;
+}
+.wp-caption img {
+	margin: 5px;
+}
+.wp-caption p.wp-caption-text {
+	margin: 0 0 4px;
+}
+.wp-smiley {
+	margin: 0;
+}
+.gadget{
+    border: 0px;
+}
+#google_translate_element{
+float: right;
+padding-right: 25px;
+margin-top: 2px;
+font-size: 60%;
+}
+#searchform{
+    float:left;
+}
+.wysija-p-firstname label, .wysija-p-lastname label, .wysija-p-email label{
+color:#666;
+}
+.wysija-p-firstname input, .wysija-p-lastname input, .wysija-p-email input{
+width:100%;
+}
+.wysija-label{
+color:#666;
+}
+.wysija-input{
+width:100%;
+}
