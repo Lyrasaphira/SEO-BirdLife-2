@@ -1,0 +1,22 @@
+#picker1 { 
+    left: 200px; 
+    width: 150px; 
+    height: 50px; 
+    border: 2px solid black; 
+    position: relative; 
+    background-image: url('test.png'); 
+    background-position: 0; 
+    background-clip: content-box; 
+    background-repeat: repeat; 
+}
+
+   .picker > #block { 
+        height: 76px; 
+        width: 50px; 
+        position: relative; 
+        top: -13px; 
+       left: -2px; 
+        background-color: #000; 
+        border-right: 5px solid black; 
+    }
+
